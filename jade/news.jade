@@ -1,0 +1,56 @@
+- var page='news'
+doctype html
+html
+	include _inc/_meta.jade
+	body
+		include _inc/_header.jade
+		include _inc/_news.jade
+		include _inc/_footer.jade
+		include _inc/_js.jade
+		script.
+			let pageItem = 9,
+				nowpage = 0,
+				maxPage;
+			$.post(apiURL + 'get_post.php',
+				function (data) {
+					newsData = data;
+					maxPage = Math.ceil(newsData.length / pageItem) - 1;
+					if(data.length < pageItem){
+						$("#news .page").addClass("hide");
+					}
+					getPageItem(0);
+				},'json'
+			);
+			function getPageNext(){
+				nowpage++;
+				getPageItem(nowpage);
+			}
+			function getPagePrev(){
+				nowpage--;
+				getPageItem(nowpage);
+			}
+			function getPageItem(page){
+				let tempString = "";
+				if(page == 0){
+					$("#news .page a:eq(0)").addClass("off");
+					$("#news .page a:eq(1)").removeClass("off");
+				}else if(page == maxPage){
+					$("#news .page a:eq(1)").addClass("off");
+					$("#news .page a:eq(0)").removeClass("off");
+				}else{
+					$("#news .page a").removeClass("off");
+				}
+				for(let i = pageItem*page ; i < pageItem*(page+1); i++){
+					
+				}
+				$.each(newsData, function (i,el){
+					if(i >= pageItem*page && i < pageItem*(page+1)){
+						tempString +=  '<div class="newsSlide_content"><div class="date"><p class="bd-style">'+el.master_show_date+'</p><span><i>'+el.category_name+'</i></span></div><div class="cover" style="background-image: url('+el.image[0]+')"><img src="images/news_border.png" alt=""><div class="info"><div class="text"><h6>'+el.master_title+'</h6><p>'+truncateString(el.master_subtitle)+'</p><div class="dot">・・・・・・</div></div></div></div><a class="more btn-style bd-style" href="javascript:void(0)" onclick="triggerNewsPop(0,'+i+')"><span>了解更多</span></a></div>'
+					}
+				});
+				$(".newsList").html(tempString);
+			}
+		
+
+			
+			

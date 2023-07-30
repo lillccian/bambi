@@ -1,0 +1,53 @@
+- var page='index'
+doctype html
+html
+	include _inc/_meta.jade
+	body
+		include _inc/_header.jade
+		include _inc/_index.jade
+		include _inc/_footer.jade
+		include _inc/_js.jade
+		script.
+			const setHeight = () => {
+				document.getElementById("top").style.height = window.innerHeight - 100 + "px"
+			};
+			let deviceWidth = window.matchMedia("(max-width: 1023px)");
+			if (deviceWidth.matches) {
+				window.addEventListener("resize", setHeight);
+				setHeight();
+			}
+			$.post(apiURL + 'get_post.php',
+				function (data) {
+					newsData = data;
+					let tempString = "";
+					$.each(data, function (i,el){
+						if(i < 10){
+							tempString +=  '<div class="newsSlide_content"><div class="date"><p class="bd-style">'+el.master_show_date+'</p><span><i>'+el.category_name+'</i></span></div><div class="cover" style="background-image: url('+el.image[0]+')"><img src="images/news_border.png" alt=""><div class="info"><div class="text"><h6>'+el.master_title+'</h6><p>'+truncateString(el.master_subtitle)+'</p><div class="dot">・・・・・・</div></div></div></div><a class="more btn-style bd-style" href="javascript:void(0)" onclick="triggerNewsPop(0,'+i+')"><span>了解更多</span></a></div>'
+						}
+						if(data.length == 1){
+							tempString +=  '<div class="newsSlide_content"><div class="date"><p class="bd-style">'+el.master_show_date+'</p><span><i>'+el.category_name+'</i></span></div><div class="cover" style="background-image: url('+el.image[0]+')"><img src="images/news_border.png" alt=""><div class="info"><div class="text"><h6>'+el.master_title+'</h6><p>'+truncateString(el.master_subtitle)+'</p><div class="dot">・・・・・・</div></div></div></div><a class="more btn-style bd-style" href="javascript:void(0)" onclick="triggerNewsPop(0,'+i+')"><span>了解更多</span></a></div>'
+						}
+					});
+					$(".newSlide").html(tempString);
+					$('.newSlide').slick({
+						slidesToScroll: 1,
+						variableWidth: true,
+						infinite: true,
+						swipe: true,
+						autoplay: true,
+						responsive: [
+							{
+								breakpoint: 767,
+								settings: {
+									slidesToShow: 1,
+									swipe: true,
+								}
+							}
+						]
+					});
+				},'json'
+			);
+		
+
+			
+			

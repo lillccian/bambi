@@ -1,0 +1,781 @@
+#loading
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: #fbf2e9
+	left: 0
+	top: 0
+	z-index: 20
+	.img
+		width: 70%
+		max-width: 400px
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		p
+			text-align: center
+			padding: 0 0 2em 0
+			font-size: 2rem
+			font-weight: 700
+			span
+				margin-left: 0.5em
+		.logo
+			width: 70%
+			max-width: 300px
+			margin: 0 auto
+#top
+	height: 100%
+	display: flex
+	background-color: #fcfaf7
+	flex-direction: column
+	position: relative
+	min-height: 800px
+	&.inpage
+		height: auto
+		min-height: initial
+header
+	flex: none
+	width: 100%
+	padding: 4em 0 3em 0
+	.container
+		display: flex
+		align-items: center
+		a
+			flex: none
+			width: 18%
+			max-width: 240px
+		nav
+			flex: 1
+			font-size: 1.2rem
+			padding: 0 1em
+			ul
+				text-align: center
+				display: flex
+				align-items: center
+				li
+					flex: 1
+					a
+						font-weight: 700
+						color: #9f7e66
+						font-size: 1.2rem
+						padding: 0.5em 0.3em
+						display: block
+						width: 100%
+						&:hover
+							span
+								color: #e9501c
+							&:before,&:after
+								opacity: 1
+						&:before,&:after
+							content: "·"
+							display: inline-block
+							vertical-align: middle
+							color: #e9501c
+							opacity: 0
+						span
+							display: inline-block
+							vertical-align: middle
+		.btns
+			flex: none
+			a
+				display: inline-block
+				vertical-align: middle
+				text-align: center
+				padding: 1.1em 3em
+				font-size: 1.2rem
+				line-height: 0.8em
+				font-weight: 700
+				background-color: #4d1221
+				transition: all 0.3s ease
+				color: #fff
+				white-space: nowrap
+				width: auto
+				&:hover
+					background-color: #e9501c
+				&.order
+					display: none
+				&.store
+					margin-right: 1em
+					padding: 1.1em 2.4em
+					background-color: #9f7e66
+					&:hover
+						background-color: #4d1221
+					img
+						display: inline-block
+						vertical-align: middle
+						width: auto
+						height: 0.88em
+						margin-left: 1em
+				span
+					display: inline-block
+					vertical-align: middle
+					white-space: nowrap
+#kv
+	flex: 1
+	.container
+		height: 100%
+		display: flex
+		flex-direction: column
+		padding-bottom: 120px
+		h1
+			text-align: center
+			padding-bottom: 1em
+			flex: none
+		.kvSlide
+			flex: 1
+			white-space: nowrap
+			position: relative
+			div
+				height: 100%
+			&:before
+				content: ""
+				position: absolute
+				width: 100%
+				height: 50%
+				top: 0
+				background: url(../images/kv_border_top.png) no-repeat center top
+				background-size: 100% auto
+				pointer-events: none
+				z-index: 1
+			&:after
+				content: ""
+				position: absolute
+				width: 100%
+				height: 50%
+				bottom: 0
+				background: url(../images/kv_border_btm.png) no-repeat center bottom
+				background-size: 100% auto
+				pointer-events: none
+				left: 0
+				z-index: 1
+			.kvSlide_content
+				display: inline-block
+				vertical-align: middle
+				height: 100%
+				width: 100%
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: cover
+				position: relative
+				&:before
+					content: ""
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					background: url(../images/kv_border_mid.png) repeat-y center center
+					background-size: 100% auto
+					pointer-events: none
+				&:after
+					content: ""
+					position: absolute
+					width: 100%
+					height: 171px
+					bottom: 0px
+					background: url(../images/kv_slide_mask.png) no-repeat center bottom
+					background-size: auto 118px
+					pointer-events: none
+					z-index: 9
+		.slick-dots
+			position: absolute
+			width: 100%
+			text-align: center
+			bottom: 0
+			z-index: 2
+			transform: translateY(60%)
+			li
+				display: inline-block
+				vertical-align: middle
+				width: 24px
+				position: relative
+				margin: 1em 2em
+				background: url(../images/slide_point.png) no-repeat center
+				background-size: contain
+				transition: all 0.3s ease
+				&.slick-active
+					background: url(../images/slide_point_on.png) no-repeat center
+					background-size: contain
+				&:before
+					content: ""
+					padding-top: 100%
+					display: block
+				button
+					appearance: none
+					border: 0
+					width: 100%
+					height: 100%
+					font-size: 0
+					position: absolute
+					left: 0
+					top: 0
+					background: none
+input#menu
+	display: none
+	&:checked + #top + #fixMenu
+		&:before
+			opacity: 1
+		>img
+			opacity: 1
+			transform: translate(0%, -50%)
+		#fixMenu_main
+			transform: translate(0% , -50%)
+			.fixMenu_btn
+				label
+					img
+						display: none
+						&:last-child
+							display: block
+#fixMenu
+	position: fixed
+	z-index: 5
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: hidden
+	pointer-events: none
+	&:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 100%
+		backdrop-filter: blur(8px)
+		background-color: rgba(255, 255, 255, 0.5)
+		pointer-events: none
+		transition: all 0.3s ease
+		opacity: 0
+	>img
+		height: 160%
+		width: auto
+		position: absolute
+		z-index: 1
+		right: 5%
+		top: 36%
+		transform: translate(0%, -50%)
+		pointer-events: none
+		transition: all 0.5s ease
+		opacity: 0
+	#fixMenu_main
+		position: absolute
+		top: 50%
+		transform: translate(calc(-100% + 115px) , -50%)
+		height: 70%
+		min-height: 600px
+		display: flex
+		width: 80%
+		max-width: 1100px
+		z-index: 2
+		transition: all 0.5s ease
+		pointer-events: auto
+		.fixMenu_nav
+			flex: 1
+			background: url(../images/menu_bg.png) repeat-x center
+			background-size: auto 100%
+			display: flex
+			align-items: center
+			.fixMenu_nav_left
+				flex: 1
+				padding: 6em 7em 6em 8em
+				.logo
+					width: 70%
+				ul
+					margin-top: 3em
+					li
+						padding: 1.5em 0
+						a
+							color: #9f7e66
+							font-size: 1.2rem
+							font-weight: 700
+							display: inline-block
+							vertical-align: middle
+							padding: 0.1em 0.5em
+							transition: all 0.3s ease
+							letter-spacing: 1px
+							&:hover
+								color: #e9501c
+						ol
+							white-space: nowrap
+							display: inline-block
+							vertical-align: middle
+							li
+								display: inline-block
+								vertical-align: middle
+								padding: 0
+								a
+									color: #dccab5
+									border-left: 2px solid #dccab5
+			.fixMenu_nav_right
+				flex: none
+				padding-right: 8em
+				&.order-style
+					.order
+						width: 200px
+					.lan
+						align-items: center
+						justify-content: center
+						margin-top: 4em
+						a
+							margin: 1em 1em
+							
+		.fixMenu_btn
+			display: flex
+			flex-direction: column
+			&.on
+				.btn
+					pointer-events: auto
+					img
+						opacity: 1
+			.btn
+				width: 120px
+				height: 96px
+				flex: none
+				position: relative
+				background: url(../images/menu_bg_t.png) no-repeat center
+				background-size: contain
+				pointer-events: none
+				&:last-child
+					background: url(../images/menu_bg_b.png) no-repeat center
+					background-size: contain
+					img
+						height: 32px
+						bottom: auto
+						top: 10%
+				img
+					width: auto
+					height: 48px
+					position: absolute
+					left: 50%
+					bottom: 10%
+					transform: translate(-50%,0%)
+					opacity: 0
+					transition: all 0.3s ease
+			label
+				flex: 1
+				position: relative
+				background: url(../images/menu_bg_m.png) repeat-y center
+				background-size: 100% auto
+				img
+					width: auto
+					height: 30px
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%,-50%)
+					&:last-child
+						display: none
+			
+
+			
+
+#fixBtns
+	position: fixed
+	z-index: 4
+	right: 0
+	height: 100%
+	display: flex
+	flex-direction: column
+	top: 0
+	align-items: center
+	padding: 1.5em
+	.order
+		flex: none
+	.lan
+		flex-direction: column
+		justify-content: center
+		a
+			display: none
+			&.fb
+				display: block
+
+#contact
+	background: url(../images/sec_bg9.png) no-repeat center top
+	background-size: 1920px auto
+	z-index: 1
+	position: relative
+	padding-top: 120px
+	margin-top: -160px
+	overflow: hidden
+	.container
+		.logo
+			width: 80%
+			max-width: 640px
+			margin: 3em auto
+		.content
+			display: flex
+			align-items: start
+			padding-top: 2em
+			.img
+				flex: 1
+				&:last-child
+					img
+						margin-left: 3%
+				img
+					margin-left: -15%
+			.text
+				flex: none
+				font-size: 1.8rem
+				text-align: center
+				padding: 4em 1em
+				font-weight: 700
+				line-height: 2em
+footer
+	background: url(../images/footer_bg.png) no-repeat center top
+	background-size: 1920px auto
+	height: 300px
+	margin-top: -270px
+	z-index: 2
+	position: relative
+	>a
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		width: 60px
+		top: 50px
+	p
+		text-align: center
+		color: #fff
+		font-size: 1.2rem
+		font-weight: 700
+		top: 180px
+		position: absolute
+		width: 100%
+		letter-spacing: 2px
+@media only screen and (max-width: 1600px)
+	#fixBtns
+		padding: 1.5em 10px
+		.order
+			width: 120px
+	input#menu:checked + #top + #fixMenu > img
+		
+		transform: translate(30%, -50%)
+	#fixMenu > img
+		transform: translate(80%, -50%)
+		right: 0
+	#contact
+		.container
+			.content
+				padding-bottom: 3rem
+				.img
+					&:last-child
+						margin-right: 3rem
+				.text
+					padding: 1em 1em
+			.logo
+				width: 45rem
+	footer
+		height: 20vw
+		background-size: auto 100%
+		background-position: center bottom
+		margin-top: -20vw
+@media only screen and (max-width: 1440px)
+	#fixBtns
+		display: none
+	#fixMenu
+		#fixMenu_main
+			.fixMenu_nav
+				.fixMenu_nav_left
+					padding: 4rem 5rem 4rem 6rem
+	header
+		padding: 2em 0
+		.container
+			padding: 0 2rem
+@media only screen and (max-width: 1023px)
+	#loading
+		.img
+			p
+				font-size: 3rem
+			.logo
+				width: 90%
+	input#menu
+		&:checked + #top
+			header
+				background: #fff
+			+ #fixMenu
+				+ #fixBtns
+					.order
+						display: none
+				&:before
+					opacity: 0
+				#fixMenu_main
+					transform: none
+					.fixMenu_nav
+						display: flex
+	#top
+		min-height: initial
+	#fixMenu
+		position: fixed
+		z-index: 12
+		>img
+			display: none
+		#fixMenu_main
+			height: 100%
+			transform: none
+			top: 0
+			left: 0
+			width: 100%
+			flex-direction: column-reverse
+			pointer-events: none
+			.fixMenu_nav
+				flex-direction: column
+				background: #FCF3E9
+				pointer-events: auto
+				display: none
+				.fixMenu_nav_left
+					flex: none
+					padding: 1.5rem
+					.logo
+						display: none
+					ul
+						text-align: center
+						li
+							ol
+								display: block
+								margin-top: 1em
+								li
+									&:first-child
+										a
+											border-left: 0px
+				.fixMenu_nav_right
+					padding-right: 0
+					position: relative
+					&.order-style
+						.lan
+							position: absolute
+							width: 165px
+							height: 165px
+							left: 50%
+							bottom: 0
+							transform: translate(-50%, 0%)
+							pointer-events: none
+							a
+								display: none
+								position: absolute
+								right: 0
+								transform: translateX(200%)
+								pointer-events: auto
+								&.fb
+									display: block
+			.fixMenu_btn
+				height: 100px
+				a
+					display: none
+				label
+					background: url(../images/animal_slide_round.png) no-repeat center
+					background-size: 9vh auto
+					width: 80px
+					height: 80px
+					position: absolute
+					right: 0
+					top: 10px
+					pointer-events: auto
+
+	#fixBtns
+		display: block
+		position: fixed
+		z-index: 11
+		width: 100%
+		height: 100px
+		padding: 0
+		pointer-events: none
+		&.on
+			.order
+				opacity: 0
+				pointer-events: none
+		.order
+			width: 6rem
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%,-50%)
+			pointer-events: auto
+			transition: all 0.3s ease
+			span
+				font-size: 1.3rem
+		.lan
+			position: absolute
+			right: 80px
+			top: 0
+			height: 100px
+			a
+				pointer-events: auto
+			a.fb
+				display: none
+	header
+		position: fixed
+		z-index: 10
+		background: none
+		padding: 30px 0
+		top: 0
+		&.on
+			background: url(../images/header_m_bg.png) no-repeat center bottom
+			background-size: 100% auto
+			.container
+				.btns
+					a.contact
+						display: none
+					a.order
+						display: block
+		.container
+			a
+				width: auto
+				max-width: initial
+				height: 50px
+				img
+					width: auto
+					height: 100%
+			.btns
+				position: fixed
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				width: 8%
+				min-width: 48px
+				a
+					display: block
+					position: relative
+					width: 100%
+					height: auto
+					padding: 0
+					aspect-ratio: 95 / 300
+					&:hover
+						background-color: transparent
+					span
+						background: none
+						position: absolute
+						left: 50%
+						top: 50%
+						transform: translate(-50%,-50%)
+						width: 1em
+						line-height: 1em
+						letter-spacing: 2px
+						writing-mode: vertical-lr
+					&:before
+						display: none
+					&:after
+						display: none
+					&.store
+						background: url(../images/fixbtn_bg1.png) no-repeat center center
+						background-size: contain
+						padding: 0
+						margin-right: 0
+						&:hover
+							background-color: transparent
+						span
+							top: 58%
+						img
+							margin-left: 0
+							position: absolute
+							left: 50%
+							top: 20%
+							transform: translate(0%,0%)
+							width: 1em
+							height: auto
+					&.contact
+						background: url(../images/fixbtn_bg2.png) no-repeat center center
+						background-size: contain
+						transform: translateY(-18%)
+					&.order
+						background: url(../images/fixbtn_bg3.png) no-repeat center center
+						background-size: contain
+						transform: translateY(-18%)
+			nav
+				display: none
+	#contact
+		.container
+			.content
+				padding-bottom: 3rem
+				padding-top: 10rem
+				position: relative
+				.img
+					transform: translateX(25%)
+					&:last-child
+						margin-right: 0
+						transform: translateX(-25%)
+				.text
+					padding: 1em 1em
+					position: absolute
+					width: 100%
+					top: 0
+			.logo
+				width: 70%
+				margin: 2em auto
+	footer
+		margin-top: -28vw
+		height: 32vw
+		>a
+			width: 12vw
+			max-width: 60px
+@media only screen and (max-width: 767px)
+	#loading
+		.img
+			p
+				font-size: 2.4rem
+	header
+		height: 100px
+		.container
+			a
+				height: 8vw
+			.btns
+				min-width: 12vw
+				a
+					aspect-ratio: initial
+					height: 37.8vw
+	#fixBtns
+		.order
+			width: 18vw
+	#fixMenu
+		#fixMenu_main
+			.fixMenu_btn
+				label
+					width: 80px
+					height: 80px
+					img
+						height: 6vw
+			.fixMenu_nav
+				overflow: hidden
+				overflow-y: auto
+				-webkit-overflow-scrolling: touch
+				.fixMenu_nav_left
+					ul
+						margin-top: 1em
+						li
+							a
+								font-size: 1.4rem
+				.fixMenu_nav_right.order-style
+					margin-top: 2em
+					.order
+						width: 32vw
+						display: block
+						span
+							font-size: 2rem
+					.lan
+						width: 100%
+						height: 100%
+						a
+							transform: translateX(180%)
+	#kv
+		padding-bottom: 12vw
+		.container
+			.kvSlide
+				&:before
+					background: url(../images/kv_border_top_m.png) no-repeat center top
+					background-size: 100% auto
+			.slick-dots
+				transform: translateY(30%)
+				li
+					width: 5vw
+					margin: 1em
+	#contact
+		.container
+			.content
+				.text
+					font-size: 1.4rem
+	footer
+		margin-top: -28vw
+		height: 42vw
+		p
+			top: auto
+			bottom: 2em
+			font-size: 1rem

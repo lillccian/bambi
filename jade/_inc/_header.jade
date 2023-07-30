@@ -1,0 +1,187 @@
+#loading
+	.img
+		img(src="images/loading.png", alt="")
+		p loading
+			span.percent 0
+			| %
+		.logo
+			img(src="images/logo.svg", alt="")
+input#menu(type="checkbox")
+#top(class = (page === "index") ? "" : "inpage")
+	header
+		.container
+			a(href="index.html") 
+				img(src="images/logo.svg", alt="")
+			nav
+				ul
+					li
+						a(href="index.html#news" onclick="track('click','nav','最新消息')") 
+							span 最新消息
+					li
+						a(href="index.html#about1" onclick="track('click','nav','關於斑比')") 
+							span 關於斑比
+					li
+						a(href="index.html#infomation" onclick="track('click','nav','斑比園區')") 
+							span 斑比園區
+					li
+						a(href="index.html#ticket" onclick="track('click','nav','營業資訊')") 
+							span 營業資訊
+			.btns
+				a.store.bl-style(href="https://shp.ee/2i9bsvr" target="_blank")
+					span 斑比商店
+					img(src="images/icon_pinkoi.svg", alt="")
+				a.contact.bl-style(href="javascript:void(0)") 
+					span 聯絡我們
+				a.order.bl-style(href="https://booking.menushop.tw/bambiland" target="_blank") 
+					span 預約入園
+	if(page == 'index')
+		#kv
+			.container
+				h1 . 斑比山丘 由此進鹿 .
+				.kvSlide
+					.kvSlide_content(style="background-image: url(images/kv_slide1.png)")
+					.kvSlide_content(style="background-image: url(images/news_photo1.png)")
+					.kvSlide_content(style="background-image: url(images/news_photo2.png)")
+#fixMenu
+	img(src="images/animal_menu_open.svg", alt="")
+	#fixMenu_main
+		.fixMenu_nav
+			.fixMenu_nav_left
+				a.logo
+					img(src="images/logo.svg", alt="")
+				ul
+					li
+						a(href="index.html#news" onclick="track('click','fix_nav','最新消息')") 
+							span 最新消息
+					li
+						a(href="index.html#about1" onclick="track('click','fix_nav','關於斑比')") 
+							span 關於斑比
+					li
+						a(href="index.html#infomation" onclick="track('click','fix_nav','斑比園區')") 
+							span 斑比園區
+						ol
+							li
+								a(href="index.html#infomation" onclick="track('click','fix_nav','斑比導覽')") 
+									span 斑比導覽
+							li
+								a(href="index.html#animal" onclick="track('click','fix_nav','動物介紹')") 
+									span 動物介紹
+							li
+								a(href="index.html#rules" onclick="track('click','fix_nav','入場規則')") 
+									span 入場規則
+					li
+						a(href="index.html#ticket" onclick="track('click','nav','營業資訊')") 
+							span 營業資訊
+						ol
+							li
+								a(href="index.html#ticket" onclick="track('click','fix_nav','票價資訊 ')") 
+									span 票價資訊 
+							li
+								a(href="index.html#time" onclick="track('click','fix_nav','營業時間')") 
+									span 營業時間
+							li
+								a(href="index.html#map" onclick="track('click','fix_nav','交通方式')") 
+									span 交通方式
+					li
+						a(href="index.html#contact" onclick="track('click','nav','聯絡我們')") 
+							span 聯絡我們
+			.fixMenu_nav_right.order-style
+				a.order(href="https://booking.menushop.tw/bambiland" target="_blank")
+					img(src="images/Bambi_Badge.png", alt="")
+					span 預約
+						br
+						| 入園
+				.lan
+					//- a(href="javascript:void(0)") 
+					//- 	span EN
+					a(href="javascript:void(0)") 
+						span 中
+					a.fb(href="https://www.facebook.com/bambiland.yilan/" target="_blank") 
+						span FB
+		.fixMenu_btn
+			if page == "index"
+				a.btn(href="#top")
+					img(src="images/logo_mini.svg", alt="")
+			else
+				a.btn(href="index.html")
+					img(src="images/logo_mini.svg", alt="")
+			label(for="menu") 
+				img(src="images/icon_menu.png", alt="")
+				img(src="images/icon_menu_close.png", alt="")
+			a.btn(href="javascript:void(0)")
+				img(src="images/icon_pinkoi_menu.svg", alt="")
+#fixBtns.order-style
+	a.order(href="https://booking.menushop.tw/bambiland" target="_blank")
+		img(src="images/Bambi_Badge.png", alt="")
+		span 預約
+			br
+			| 入園
+	.lan
+		a.fb(href="https://www.facebook.com/bambiland.yilan/" target="_blank") 
+			span FB
+		a(href="javascript:void(0)") 
+			span 中
+		//- a(href="javascript:void(0)") 
+		//- 	span EN
+#newsPop
+	.newsPop_content_bg
+		a(href="javascript:void(0)" onclick="triggerNewsPop()")
+			img(src="images/icon_arrow_left.png", alt="") 
+			img.h(src="images/icon_arrow_left_h.png", alt="")
+		.newsPop_content
+			.newsPop_content_box
+				.contentL
+					ul
+						li
+							i
+							img(src="images/news_photo1.png", alt="")
+						li
+							i
+							img(src="images/news_photo2.png", alt="")
+						li
+							i
+							img(src="images/news_photo3.png", alt="")
+				.contentR
+					h4 宜蘭の秘境
+					h6 “ 把小鹿、水豚、驢兒當女朋友在寵 讓他們每天吃飽喝足，翻肚呼呼大睡就是最有成就感的事了。”
+					p 親近大自然的梅花鹿與斑比好朋友們，可以近距離互動餵食拍照的區域。以及美美子咖啡廳及美美子霜淇淋進駐親近大自然的梅花鹿與斑比好朋友們。可以近距離互動餵食拍照的區域。親近大自然的梅花鹿與斑比好朋友們餵食拍照的區域。可以近距離互動餵食拍照的區域。以及美美子咖啡廳及美美子霜淇淋進駐親近大自然的梅花鹿與斑比好朋友們。可以近距離互動餵食拍照的區域。親近大自然的梅花鹿與斑比好朋友們餵食拍照的區域。
+		.newsPop_content
+			.newsPop_content_other
+				h6 預約須知
+				ul
+					li 每次最多預約6人，超過6人請拆成多組分開預約，預約成功將以e-mail通知，故請填寫正確資訊
+					li 預約人數為人頭計算，不需購票的嬰幼兒也算在預約總人數內，若不便前來，請提前線上取消預約，將名額讓給需要的人。
+					li 預約時段為早上9點到下午4點，每30分鐘為一梯次，共15個時段
+					li 最早預約時間為14天前。
+					li 每天凌晨12點開放新一天預約時段。
+					li 預約名額有限，若顯示無可預約時段代表已經額滿。
+					li 每梯次報到時間為30分鐘，請在時間內完成報到，不須提早半小時報到，超過預約時段者將依現場人數調整入園時間。（例如，預約12點，報到時間為12:00-12:30）
+					li 人數到齊才能入場購票。
+		.newsPop_content
+			.newsPop_content_other
+				h6 注意事項
+				ul
+					li 禁帶外食及禁止飲用外食
+					li 禁帶寵物，避免動物間交互感染。
+					li 因安全考量，娃娃車及輪椅禁止進入互動區，建議攜帶嬰兒背帶。
+					li 斑比互動區為戶外空間，雨天請攜帶雨傘(梅花鹿不怕下雨的喔！)。
+					li 園區免費提供防蚊液，建議使用避免被蚊蟲叮咬。
+					li 防疫期間需配戴口罩及量測體溫入場。
+					li 暫無電話，可私訊臉書粉專小編，敬請見諒。
+		.newsPop_content
+			.newsPop_content_map
+				.contentL
+					ul
+						li
+							i
+							img(src="images/map_photos/photo_21.png", alt="")
+				.contentR
+					.num
+						span 21
+					h6 美美子咖啡廳
+					p 一邊喝咖啡吃甜點，一邊看斑比與水豚君爺爺在落地窗邊跟你打招呼！還有招牌手煮焦糖乳酪布丁一定要來品嘗！
+		
+
+
+
+				

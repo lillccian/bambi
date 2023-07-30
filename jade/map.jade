@@ -1,0 +1,21 @@
+- var page='map'
+doctype html
+html
+	include _inc/_meta.jade
+	body
+		include _inc/_header.jade
+		include _inc/_map.jade
+		include _inc/_footer.jade
+		include _inc/_js.jade
+		script.
+			if($("html.mobile").length){
+				$(window).load(function(){
+					var el = document.querySelector('.map');
+					new PinchZoom.default(el, {});
+				})
+			}
+			
+		
+
+			
+			
