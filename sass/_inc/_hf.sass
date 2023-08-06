@@ -92,21 +92,17 @@ header
 				white-space: nowrap
 				width: auto
 				&:hover
-					background-color: #e9501c
+					color: #e9501c
 				&.order
 					display: none
 				&.store
+					color: #9f7e66
+					background-color: #fcfaf7
 					margin-right: 1em
 					padding: 1.1em 2.4em
-					background-color: #9f7e66
 					&:hover
-						background-color: #4d1221
-					img
-						display: inline-block
-						vertical-align: middle
-						width: auto
-						height: 0.88em
-						margin-left: 1em
+						color: #fcfaf7
+						background-color: #9f7e66
 				span
 					display: inline-block
 					vertical-align: middle
@@ -277,8 +273,8 @@ input#menu
 			align-items: center
 			.fixMenu_nav_left
 				flex: 1
-				padding: 6em 7em 6em 8em
-				.logo
+				padding: 6em 2em 6em 8em
+				.logo img
 					width: 70%
 				ul
 					margin-top: 3em
@@ -312,6 +308,7 @@ input#menu
 				&.order-style
 					.order
 						width: 200px
+						margin: 0 auto
 					.lan
 						align-items: center
 						justify-content: center
@@ -386,7 +383,7 @@ input#menu
 		justify-content: center
 		a
 			display: none
-			&.fb
+			&.fb, &.ig, &.yt
 				display: block
 
 #contact
@@ -555,7 +552,7 @@ footer
 								right: 0
 								transform: translateX(200%)
 								pointer-events: auto
-								&.fb
+								&.fb, &.ig, &.yt
 									display: block
 			.fixMenu_btn
 				height: 100px
@@ -600,7 +597,7 @@ footer
 			height: 100px
 			a
 				pointer-events: auto
-			a.fb
+			a.fb, a.ig, a.yt
 				display: none
 	header
 		position: fixed

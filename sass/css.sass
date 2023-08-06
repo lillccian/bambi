@@ -402,14 +402,12 @@ h1
 				color: #8a654c
 				&:before,&:after
 					opacity: 1
-			&.fb
-				background: url(../images/icon_fb_bg.png) no-repeat center
+			&.fb, &.ig, &.yt
 				background-size: contain
 				width: 60px
 				height: 60px
 				color: #fff
 				&:hover
-					background: url(../images/icon_fb_bg_h.png) no-repeat center
 					background-size: contain
 				&:before,&:after
 					display: none
@@ -418,6 +416,19 @@ h1
 					left: 50%
 					top: 50%
 					transform: translate(-50%,-50%)
+			&.fb
+				background: url(../images/icon_fb_bg.png) no-repeat center
+				&:hover
+					background: url(../images/icon_fb_bg_h.png) no-repeat center
+			&.ig
+				background: url(../images/icon_ig_bg.png) no-repeat center
+				&:hover
+					background: url(../images/icon_ig_bg_h.png) no-repeat center
+			&.yt
+				background: url(../images/icon_yt_bg.png) no-repeat center
+				&:hover
+					background: url(../images/icon_yt_bg_h.png) no-repeat center
+
 #hideimg
 	display: none
 @media only screen and (max-width: 1600px)

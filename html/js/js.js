@@ -244,7 +244,7 @@ function triggerNewsPop(ta, i, type) {
       })
       $(".newsPop_content .newsPop_content_box").html('<div class="contentL"><ul>'+imgString+'</ul></div><div class="contentR"><h4>'+newsData[i].master_title+'</h4><h6>'+newsData[i].master_subtitle+'</h6><p>'+newsData[i].master_content+'</p></div>');
     }
-    if (ta == 3) {
+    if (ta == 5) {
       $(".newsPop_content_map .contentL img").attr("src","images/map_photos/photo_"+i+".png");
       $(".newsPop_content_map .contentR").attr("class", "contentR");
       $(".newsPop_content_map .contentR").addClass("zone" + type);

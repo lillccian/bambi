@@ -5,6 +5,7 @@
 	z-index: 1
 	position: relative
 	padding-top: 240px
+	padding-bottom: 50px
 	&.list
 		background: url(../images/newslist_bg_deco.png) center top repeat-y, url(../images/newslist_bg_top.png) center top no-repeat
 		background-size: 1920px auto,1920px auto
@@ -45,10 +46,10 @@
 		position: relative
 		>a
 			position: absolute
-			right: 0
 			color: #dccab5
-			bottom: 160px
-			right: 10px
+			bottom: 175px
+			right: calc((100vw - 1640px)/2)
+			z-index: 2
 			span
 				display: inline-block
 				vertical-align: middle
@@ -187,7 +188,6 @@
 							font-size: 1.4rem
 							line-height: 2em
 .about
-	pointer-events: none
 	.container
 		.content
 			display: flex
@@ -223,6 +223,10 @@
 				p
 					line-height: 1.8em
 					font-size: 1.3rem
+				.more
+					color: #8a654c
+					text-decoration: underline
+					font-weight: bold
 #about1
 	margin-top: -220px
 	background: url(../images/sec_bg2.png) no-repeat center top
@@ -237,11 +241,12 @@
 	position: relative
 	padding-top: 400px
 #infomation
-	background: #fcfaf7 url(../images/sec_bg4.png) no-repeat center top
+	background: url(../images/sec_bg4.png) no-repeat center top
 	background-size: 1920px auto
 	z-index: 1
 	position: relative
 	padding-top: 180px
+	margin-top: -300px
 	.container
 		.content
 			padding: 4em 3em
@@ -480,11 +485,12 @@
 							transform: scale(1.05)
 
 #animal
-	background: url(../images/sec_bg4_2.png) no-repeat center top
+	background: #fbfaf6 url(../images/sec_bg4_2.png) no-repeat center top
 	background-size: 1920px auto
 	z-index: 1
 	position: relative
-	padding-top: 180px
+	padding-top: 120px
+	padding-bottom: 100px
 	.container
 		#animalBox
 			padding-bottom: 7em
@@ -617,7 +623,7 @@
 								line-height: 1.5em
 								letter-spacing: 2px
 #rules
-	background: url(../images/sec_bg4_3.png) no-repeat center top
+	background: #fcf2e8 url(../images/sec_bg4_3.png) no-repeat center top
 	background-size: 1920px auto
 	z-index: 1
 	position: relative
@@ -634,8 +640,7 @@
 				padding-left: 1.6em
 				padding-right: 2em
 				li
-					padding: 0.5em 0
-					line-height: 1.5em
+					line-height: 2em
 					color: #9f7e66
 					font-size: 1.2rem
 					span
@@ -650,7 +655,6 @@
 	z-index: 1
 	position: relative
 	padding-top: 140px
-	margin-top: -330px
 	overflow: hidden
 	.container
 		.content
@@ -701,7 +705,7 @@
 						right: 0
 						text-align: center
 						top: 50%
-						padding: 0 4.5em
+						padding: 0 4em
 						transform: translateY(-50%)
 						h6
 							font-size: 6.3rem
@@ -709,18 +713,19 @@
 							span
 								font-size: 4rem
 						p
-							text-align: left
 							line-height: 1.5em
 							margin-top: 1.5em
 		.btns
 			padding: 3em 0
+
 #time
-	background: #fcfaf7 url(../images/sec_bg6.png) no-repeat center top
+	background: #fcf2e8 url(../images/sec_bg6.png) no-repeat center top
 	background-size: 1920px auto
 	z-index: 1
 	position: relative
 	padding-top: 80px
 	overflow: hidden
+	margin-top: -60px
 	.container
 		.content
 			display: flex
@@ -762,6 +767,9 @@
 					margin: 1em 0
 					transition: all 0.3s ease
 					background-color: #dccab5
+					&.time1, &.time2, &.time3
+						span
+							color: #fff
 					&.time1
 						span
 							&:after
@@ -789,15 +797,21 @@
 							right: auto
 							left: 30px
 			.btns
-				min-width: 100% 
+				min-width: 100%
 				padding: 3em 0
+		.msg
+			text-align: center
+			p
+				color: #b29179
+				margin-top: 4em
+				font-size: 1.4rem
+				padding: 0.5rem 0
 #map
-	background: #fcfaf7 url(../images/sec_bg7.png) no-repeat center top
+	background: #fcf2e8 url(../images/sec_bg7.png) no-repeat center top
 	background-size: 1920px auto
 	z-index: 1
 	position: relative
-	padding-top: 80px
-	margin-top: -40px
+	padding-top: 100px
 	.container
 		.content
 			.mapBox
@@ -817,7 +831,6 @@
 						transform: translate(-50%,-50%)
 				.info
 					flex: 1
-					background-color: #fbf2e9
 					padding: 5em
 					h6
 						font-size: 2.4rem
@@ -897,10 +910,129 @@
 					pointer-events: none
 					left: 0
 					z-index: 1
+		.btns
+			padding: 2em 0 5em
+#questions
+	position: relative
+	z-index: 1
+	padding-top: 40px
+	background: #fcf2e8
+	&:before
+		position: absolute
+		content: ''
+		display: block
+		width: 100%
+		max-width: 1920
+		margin: 0 auto
+		height: 10vw
+		min-height: 192
+		background: url(../images/sec_bg10_1.png) no-repeat center top
+		top: -100px
+		z-index: 1
+	input.checkbox
+		display: none
+	.question-session
+		text-align: center
+		> label
+			background-color: #8a654c
+			span
+				color: #fff
+				&::after
+					background: url(../images/icon_arrow_rt_w.png) no-repeat center
+					background-size: contain
+		> input.checkbox ~ .content
+			max-height: 0
+			overflow: hidden
+			transition: all 0.5s ease
+		> input.checkbox:checked
+			+ label
+				span
+					&::after
+						transform: rotate(0deg) translateY(-50%)
+			~ .content
+				max-height: 1250px
+		&:last-child
+			> input.checkbox:checked
+				~ .content
+					max-height: 450px
+	label
+		margin: 1.5em 0 0
+		width: 100%
+		span
+			cursor: pointer
+			&::after
+				transform: rotate(90deg) translateY(-50%)
+				transform-origin: top
+	.question-content
+		label
+			display: inline-block
+			border-radius: 30px
+			background: #fff
+			span
+				display: block
+				padding: 1.3em 6em
+				font-size: 1.4rem
+				text-align: center
+				font-weight: 700
+				color: #8a654c
+				position: relative
+				letter-spacing: 2px
+				transition: all 0.3s ease
+			.dot
+				color: #fff
+				font-size: 1.5rem
+			> span
+				&::before
+					content: 'Q'
+					position: absolute
+					padding: 1.3em 2em
+					border-radius: 30px
+					background: #dccab5
+					top: 0
+					left: 0
+				&::after
+					content: ""
+					width: 16px
+					height: 16px
+					position: absolute
+					right: 30px
+					top: 2rem
+					transform: rotate(90deg)
+					transition: all 0.3s ease
+					transform-origin: center
+					background: url(../images/icon_arrow_rt.png) no-repeat center
+					background-size: contain
+			.content
+				transition: all 0.3s ease
+				max-height: 0
+				overflow: hidden
+				span
+					line-height: 1.5em
+					color: #fff
+					padding-bottom: 2em
+			&:hover
+				background: #dccab5
+		input.checkbox:checked + label
+			background: #dccab5
+			span
+				&::before
+					content: 'A'
+				&::after
+					transform: rotate(0deg)
+			> .content
+				max-height: 180px
+	.img
+		position: relative
+		height: 400px
+		img
+			width: 70%
+			margin: 5em 0
+			position: absolute
+			left: 15%
+			z-index: 2
 #shop
 	background: #fcfaf7 url(../images/sec_bg8.png) no-repeat center top
 	background-size: 1920px auto
-	z-index: 1
 	position: relative
 	padding-top: 120px
 	.container
@@ -1158,6 +1290,14 @@
 					font-weight: 700
 					margin-bottom: 0.5em
 					line-height: 1.2em
+				.sub
+					font-size: 2rem
+					font-weight: 700
+					margin-bottom: 1.5em
+					line-height: 1.2em
+				p
+					line-height: 1.8em
+					font-size: 1.3rem
 				ul
 					list-style-type: decimal
 					padding-left: 2.2em
@@ -1441,7 +1581,6 @@
 								left: 100%
 
 	#ticket
-		margin-top: -24vw
 	#map
 		margin-top: 2rem
 		padding-top: 2rem
@@ -1640,7 +1779,6 @@
 				.img
 					width: 50%
 	#ticket
-		margin-top: -60vw
 		.container
 			padding: 0
 			.content
