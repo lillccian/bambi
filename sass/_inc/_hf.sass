@@ -97,9 +97,32 @@ header
 					display: none
 				&.questions
 					color: #9f7e66
-					background-color: #fcfaf7
 					margin-right: 1em
 					padding: 1.1em 2.4em
+					position: relative
+					background: url(../images/bm_b_light.png) repeat-x center center
+					background-size: auto 100%
+					position: relative
+					&:before
+						content: ""
+						position: absolute
+						width: 50%
+						height: 100%
+						left: 0
+						background: url(../images/bl_b_light.png) no-repeat left
+						background-size: auto 100%
+						top: 0
+						pointer-events: none
+					&:after
+						content: ""
+						position: absolute
+						width: 50%
+						height: 100%
+						right: 0
+						background: url(../images/br_b_light.png) no-repeat right
+						background-size: auto 100%
+						top: 0
+						pointer-events: none
 					&:hover
 						color: #fcfaf7
 						background-color: #9f7e66
