@@ -3616,7 +3616,6 @@ h1 {
 }
 
 #top {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3798,9 +3797,6 @@ header .container .btns a span {
   white-space: nowrap;
   position: relative;
 }
-#kv .container .kvSlide div {
-  height: 100%;
-}
 #kv .container .kvSlide:before {
   content: "";
   position: absolute;
@@ -3827,7 +3823,7 @@ header .container .btns a span {
 #kv .container .kvSlide .kvSlide_content {
   display: inline-block;
   vertical-align: middle;
-  height: 100%;
+  aspect-ratio: 3/2;
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
