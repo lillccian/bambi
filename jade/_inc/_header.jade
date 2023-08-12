@@ -21,17 +21,16 @@ input#menu(type="checkbox")
 						a(href="index.html#about1" onclick="track('click','nav','關於斑比')") 
 							span 關於斑比
 					li
-						a(href="index.html#infomation" onclick="track('click','nav','斑比園區')") 
-							span 斑比園區
+						a(href="index.html#ticket" onclick="track('click','nav','營業資訊')")
+							span 園區資訊
 					li
-						a(href="index.html#ticket" onclick="track('click','nav','營業資訊')") 
-							span 營業資訊
+						a(href="index.html#infomation" onclick="track('click','nav','斑比玩樂')")
+							span 斑比玩樂
 			.btns
-				a.store.bl-style(href="https://shp.ee/2i9bsvr" target="_blank")
-					span 斑比商店
-					img(src="images/icon_pinkoi.svg", alt="")
-				a.contact.bl-style(href="javascript:void(0)") 
-					span 聯絡我們
+				a.questions(href="index.html#questions" onclick="track('click','nav','斑比常見Q&A')")
+					span 斑比常見Q&A
+				a.contact.bl-style(href="https://www.104.com.tw/company/1a2x6bl98f")
+					span 加入斑比
 				a.order.bl-style(href="https://booking.menushop.tw/bambiland" target="_blank") 
 					span 預約入園
 	if(page == 'index')
@@ -42,6 +41,8 @@ input#menu(type="checkbox")
 					.kvSlide_content(style="background-image: url(images/kv_slide1.png)")
 					.kvSlide_content(style="background-image: url(images/news_photo1.png)")
 					.kvSlide_content(style="background-image: url(images/news_photo2.png)")
+					.kvSlide_content(style="background-image: url(images/news_photo3.png)")
+					.kvSlide_content(style="background-image: url(images/news_photo4.png)")
 #fixMenu
 	img(src="images/animal_menu_open.svg", alt="")
 	#fixMenu_main
@@ -57,47 +58,56 @@ input#menu(type="checkbox")
 						a(href="index.html#about1" onclick="track('click','fix_nav','關於斑比')") 
 							span 關於斑比
 					li
-						a(href="index.html#infomation" onclick="track('click','fix_nav','斑比園區')") 
-							span 斑比園區
+						a(href="index.html#ticket" onclick="track('click','nav','營業資訊')")
+							span 園區資訊
 						ol
 							li
-								a(href="index.html#infomation" onclick="track('click','fix_nav','斑比導覽')") 
-									span 斑比導覽
+								a(href="index.html#ticket" onclick="track('click','fix_nav','入園票價')")
+									span 入園票價
 							li
-								a(href="index.html#animal" onclick="track('click','fix_nav','動物介紹')") 
-									span 動物介紹
+								a(href="index.html#time" onclick="track('click','fix_nav','營業時間')")
+									span 營業時間
+							li
+								a(href="index.html#map" onclick="track('click','fix_nav','交通方式')")
+									span 交通方式
 							li
 								a(href="index.html#rules" onclick="track('click','fix_nav','入場規則')") 
 									span 入場規則
+
 					li
-						a(href="index.html#ticket" onclick="track('click','nav','營業資訊')") 
-							span 營業資訊
+						a(href="index.html#infomation" onclick="track('click','fix_nav','斑比玩樂')")
+							span 斑比玩樂
 						ol
+
 							li
-								a(href="index.html#ticket" onclick="track('click','fix_nav','票價資訊 ')") 
-									span 票價資訊 
+								a(href="index.html#infomation" onclick="track('click','fix_nav','園區地圖')")
+									span 園區地圖
 							li
-								a(href="index.html#time" onclick="track('click','fix_nav','營業時間')") 
-									span 營業時間
-							li
-								a(href="index.html#map" onclick="track('click','fix_nav','交通方式')") 
-									span 交通方式
+
+								a(href="index.html#animal" onclick="track('click','fix_nav','吉祥物好朋友')")
+									span 吉祥物好朋友
+					li
+						- var qaname = "track('click','nav', '斑比常見Q&A')"
+						a(href="index.html#questions" onclick=(qaname))
+							span 斑比常見Q&A
 					li
 						a(href="index.html#contact" onclick="track('click','nav','聯絡我們')") 
 							span 聯絡我們
 			.fixMenu_nav_right.order-style
-				a.order(href="https://booking.menushop.tw/bambiland" target="_blank")
+				a.order(href="https://shopee.tw/bambiland.yilan" target="_blank")
 					img(src="images/Bambi_Badge.png", alt="")
-					span 預約
+					span 斑比
 						br
-						| 入園
+						| 商店
 				.lan
 					//- a(href="javascript:void(0)") 
 					//- 	span EN
-					a(href="javascript:void(0)") 
-						span 中
 					a.fb(href="https://www.facebook.com/bambiland.yilan/" target="_blank") 
 						span FB
+					a.ig(href="https://www.instagram.com/bambiland.yilan/" target="_blank")
+						span IG
+					a.yt(href="https://www.youtube.com/@BambilandYilan/" target="_blank")
+						span YT
 		.fixMenu_btn
 			if page == "index"
 				a.btn(href="#top")
@@ -109,20 +119,21 @@ input#menu(type="checkbox")
 				img(src="images/icon_menu.png", alt="")
 				img(src="images/icon_menu_close.png", alt="")
 			a.btn(href="javascript:void(0)")
-				img(src="images/icon_pinkoi_menu.svg", alt="")
 #fixBtns.order-style
-	a.order(href="https://booking.menushop.tw/bambiland" target="_blank")
+	a.order(href="https://shopee.tw/bambiland.yilan" target="_blank")
 		img(src="images/Bambi_Badge.png", alt="")
-		span 預約
+		span 斑比
 			br
-			| 入園
+			| 商店
 	.lan
-		a.fb(href="https://www.facebook.com/bambiland.yilan/" target="_blank") 
-			span FB
-		a(href="javascript:void(0)") 
-			span 中
-		//- a(href="javascript:void(0)") 
+		//- a(href="javascript:void(0)")
 		//- 	span EN
+		a.fb(href="https://www.facebook.com/bambiland.yilan/" target="_blank")
+			span FB
+		a.ig(href="https://www.instagram.com/bambiland.yilan/" target="_blank")
+			span IG
+		a.yt(href="https://www.youtube.com/@BambilandYilan/" target="_blank")
+			span YT
 #newsPop
 	.newsPop_content_bg
 		a(href="javascript:void(0)" onclick="triggerNewsPop()")
