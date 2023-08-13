@@ -281,7 +281,6 @@ input#menu
 		top: 50%
 		transform: translate(calc(-100% + 115px) , -50%)
 		height: 70%
-		min-height: 600px
 		display: flex
 		width: 80%
 		max-width: 1100px
@@ -562,21 +561,7 @@ footer
 					position: relative
 					&.order-style
 						.lan
-							position: absolute
-							width: 165px
-							height: 165px
-							left: 50%
-							bottom: 0
-							transform: translate(-50%, 0%)
-							pointer-events: none
-							a
-								display: none
-								position: absolute
-								right: 0
-								transform: translateX(200%)
-								pointer-events: auto
-								&.fb, &.ig, &.yt
-									display: block
+							margin-top: 2em
 			.fixMenu_btn
 				height: 100px
 				a
@@ -646,60 +631,7 @@ footer
 					width: auto
 					height: 100%
 			.btns
-				position: fixed
-				right: 0
-				top: 50%
-				transform: translateY(-50%)
-				width: 8%
-				min-width: 48px
-				a
-					display: block
-					position: relative
-					width: 100%
-					height: auto
-					padding: 0
-					aspect-ratio: 95 / 300
-					&:hover
-						background-color: transparent
-					span
-						background: none
-						position: absolute
-						left: 50%
-						top: 50%
-						transform: translate(-50%,-50%)
-						width: 1em
-						line-height: 1em
-						letter-spacing: 2px
-						writing-mode: vertical-lr
-					&:before
-						display: none
-					&:after
-						display: none
-					&.questions
-						background: url(../images/fixbtn_bg1.png) no-repeat center center
-						background-size: contain
-						padding: 0
-						margin-right: 0
-						&:hover
-							background-color: transparent
-						span
-							top: 58%
-						img
-							margin-left: 0
-							position: absolute
-							left: 50%
-							top: 20%
-							transform: translate(0%,0%)
-							width: 1em
-							height: auto
-					&.contact
-						background: url(../images/fixbtn_bg2.png) no-repeat center center
-						background-size: contain
-						transform: translateY(-18%)
-					&.order
-						background: url(../images/fixbtn_bg3.png) no-repeat center center
-						background-size: contain
-						transform: translateY(-18%)
+				display: none
 			nav
 				display: none
 	#contact
@@ -770,11 +702,6 @@ footer
 						display: block
 						span
 							font-size: 2rem
-					.lan
-						width: 100%
-						height: 100%
-						a
-							transform: translateX(180%)
 	#kv
 		padding-bottom: 12vw
 		.container

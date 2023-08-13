@@ -711,10 +711,10 @@
 						right: 0
 						text-align: center
 						top: 50%
-						padding: 0 4em
+						padding: 0 2em
 						transform: translateY(-50%)
 						h6
-							font-size: 6.3rem
+							font-size: 6rem
 							font-weight: 900
 							span
 								font-size: 4rem
@@ -957,11 +957,11 @@
 					&::after
 						transform: rotate(0deg) translateY(-50%)
 			~ .content
-				max-height: 1250px
+				max-height: 2000px
 		&:last-child
 			> input.checkbox:checked
 				~ .content
-					max-height: 450px
+					max-height: 1000px
 	label
 		margin: 1.5em 0 0
 		width: 100%
@@ -1003,10 +1003,10 @@
 					height: 16px
 					position: absolute
 					right: 30px
-					top: 2rem
-					transform: rotate(90deg)
+					top: 50%
+					transform: rotate(90deg) translateY(-50%)
 					transition: all 0.3s ease
-					transform-origin: center
+					transform-origin: 8px 0px
 					background: url(../images/icon_arrow_rt.png) no-repeat center
 					background-size: contain
 			.content
@@ -1025,9 +1025,9 @@
 				&::before
 					content: 'A'
 				&::after
-					transform: rotate(0deg)
+					transform: rotate(0deg) translateY(-50%)
 			> .content
-				max-height: 180px
+				max-height: 300px
 	.img
 		position: relative
 		height: 400px
@@ -1375,7 +1375,7 @@
 								pointer-events: none
 								left: 0
 								z-index: 1
-							
+
 				.contentR
 					flex: 1.2
 					padding: 1em 5em 1em 6em
@@ -1438,7 +1438,7 @@
 								pointer-events: none
 								left: 0
 								z-index: 1
-							
+
 				.contentR
 					flex: 1.2
 					padding: 1em 5em 1em 6em
@@ -1561,7 +1561,6 @@
 					pointer-events: none
 @media only screen and (max-width: 1440px)
 	#rules
-		padding-bottom: 17vw
 		.container
 			.content
 				align-items: center
@@ -1587,11 +1586,6 @@
 							.info
 								width: 60%
 								left: 100%
-
-	#ticket
-	#map
-		margin-top: 2rem
-		padding-top: 2rem
 @media only screen and (max-width: 1023px)
 	#news
 		background-size: 130% auto
@@ -1782,8 +1776,6 @@
 		.container
 			.content
 				flex-direction: column
-				ul
-					padding-right: 10%
 				.img
 					width: 50%
 	#ticket
@@ -1843,15 +1835,16 @@
 					width: 100%
 					font-size: 0
 					display: flex
-					flex-wrap: wrap
+					flex-direction: column
 					h6
 						width: 100%
 					p
-						display: inline-block
+						display: flex
 						vertical-align: middle
 						min-width: 33%
 						font-size: 1.4rem
 						line-height: 1.5em
+						justify-content: center
 						span
 							display: block
 					label
@@ -1890,6 +1883,35 @@
 						img
 							width: 100%
 							height: auto
+					.info
+						h6
+							margin-bottom: 1em
+						.tabContent
+							height: auto
+				.btns
+					padding: 0 10%
+	#questions
+		&:before
+			top: -10vw
+		.question-content
+			label
+				border-radius: 40px
+				> span
+					font-size: 1.2em
+					padding: 1.3em 1em 1.3em 4em
+					&:before
+						border-radius: 40px
+				.content
+					span
+						padding: 1.3em
+					br
+						display: none
+		.question-session
+			> input.checkbox:checked
+				~ .content
+					max-height: 2500px
+		.img
+			height: 30vw
 	#shop
 		padding-bottom: 6rem
 		.container
@@ -2107,11 +2129,10 @@
 							h6
 								font-size: 2.6rem
 			.btns
+				flex-direction: column
 				padding: 2em 15vw
 				a
-					margin: 0
-					&:last-child
-						display: none
+					margin: 1em 0 0
 	#time
 		.container
 			.content
@@ -2207,5 +2228,22 @@
 		.mapZoom
 			aspect-ratio: 367 / 483
 			overflow: hidden
-
-	
+	#questions
+		.question-content
+			> label
+				> span::after
+					width: 12px
+					height: 12px
+					right: 20px
+		.question-content
+			label
+				border-radius: 20px
+				> span
+					padding: 1.3em 3em
+					line-height: 1.2
+					&::before
+						border-radius: 100%
+						width: 25px
+						height: 25px
+						padding: 5px
+						line-height: 20px

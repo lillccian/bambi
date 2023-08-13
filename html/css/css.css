@@ -1649,13 +1649,13 @@ h1 {
   right: 0;
   text-align: center;
   top: 50%;
-  padding: 0 4em;
+  padding: 0 2em;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 #ticket .container .content .ticket .info .infoR h6 {
-  font-size: 6.3rem;
+  font-size: 6rem;
   font-weight: 900;
 }
 #ticket .container .content .ticket .info .infoR h6 span {
@@ -1960,10 +1960,10 @@ h1 {
           transform: rotate(0deg) translateY(-50%);
 }
 #questions .question-session > input.checkbox:checked ~ .content {
-  max-height: 1250px;
+  max-height: 2000px;
 }
 #questions .question-session:last-child > input.checkbox:checked ~ .content {
-  max-height: 450px;
+  max-height: 1000px;
 }
 #questions label {
   margin: 1.5em 0 0;
@@ -2016,15 +2016,15 @@ h1 {
   height: 16px;
   position: absolute;
   right: 30px;
-  top: 2rem;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  top: 50%;
+  -webkit-transform: rotate(90deg) translateY(-50%);
+      -ms-transform: rotate(90deg) translateY(-50%);
+          transform: rotate(90deg) translateY(-50%);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
+  -webkit-transform-origin: 8px 0px;
+      -ms-transform-origin: 8px 0px;
+          transform-origin: 8px 0px;
   background: url(../images/icon_arrow_rt.png) no-repeat center;
   background-size: contain;
 }
@@ -2049,12 +2049,12 @@ h1 {
   content: "A";
 }
 #questions .question-content input.checkbox:checked + label > span::after {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(0deg) translateY(-50%);
+      -ms-transform: rotate(0deg) translateY(-50%);
+          transform: rotate(0deg) translateY(-50%);
 }
 #questions .question-content input.checkbox:checked + label > .content {
-  max-height: 180px;
+  max-height: 300px;
 }
 #questions .img {
   position: relative;
@@ -2752,9 +2752,6 @@ h1 {
 }
 
 @media only screen and (max-width: 1440px) {
-  #rules {
-    padding-bottom: 17vw;
-  }
   #rules .container .content {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2781,10 +2778,6 @@ h1 {
   #animal .container #animalBox .animalSlide .animalSlide_content a .info {
     width: 60%;
     left: 100%;
-  }
-  #map {
-    margin-top: 2rem;
-    padding-top: 2rem;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -3044,9 +3037,6 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #rules .container .content ul {
-    padding-right: 10%;
-  }
   #rules .container .content .img {
     width: 50%;
   }
@@ -3125,18 +3115,25 @@ h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #time .container .content .info h6 {
     width: 100%;
   }
   #time .container .content .info p {
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     vertical-align: middle;
     min-width: 33%;
     font-size: 1.4rem;
     line-height: 1.5em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #time .container .content .info p span {
     display: block;
@@ -3187,6 +3184,40 @@ h1 {
   #map .container .content .mapBox .img img {
     width: 100%;
     height: auto;
+  }
+  #map .container .content .mapBox .info h6 {
+    margin-bottom: 1em;
+  }
+  #map .container .content .mapBox .info .tabContent {
+    height: auto;
+  }
+  #map .container .content .btns {
+    padding: 0 10%;
+  }
+  #questions:before {
+    top: -10vw;
+  }
+  #questions .question-content label {
+    border-radius: 40px;
+  }
+  #questions .question-content label > span {
+    font-size: 1.2em;
+    padding: 1.3em 1em 1.3em 4em;
+  }
+  #questions .question-content label > span:before {
+    border-radius: 40px;
+  }
+  #questions .question-content label .content span {
+    padding: 1.3em;
+  }
+  #questions .question-content label .content br {
+    display: none;
+  }
+  #questions .question-session > input.checkbox:checked ~ .content {
+    max-height: 2500px;
+  }
+  #questions .img {
+    height: 30vw;
   }
   #shop {
     padding-bottom: 6rem;
@@ -3461,13 +3492,14 @@ h1 {
     font-size: 2.6rem;
   }
   #ticket .container .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 2em 15vw;
   }
   #ticket .container .btns a {
-    margin: 0;
-  }
-  #ticket .container .btns a:last-child {
-    display: none;
+    margin: 1em 0 0;
   }
   #time .container .content .info p {
     font-size: 1.2rem;
@@ -3579,6 +3611,25 @@ h1 {
   #infomation_map .mapZoom {
     aspect-ratio: 367/483;
     overflow: hidden;
+  }
+  #questions .question-content > label > span::after {
+    width: 12px;
+    height: 12px;
+    right: 20px;
+  }
+  #questions .question-content label {
+    border-radius: 20px;
+  }
+  #questions .question-content label > span {
+    padding: 1.3em 3em;
+    line-height: 1.2;
+  }
+  #questions .question-content label > span::before {
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    line-height: 20px;
   }
 }
 #loading {
@@ -3969,7 +4020,6 @@ input#menu:checked + #top + #fixMenu #fixMenu_main .fixMenu_btn label img:last-c
       -ms-transform: translate(calc(-100% + 115px), -50%);
           transform: translate(calc(-100% + 115px), -50%);
   height: 70%;
-  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4374,27 +4424,7 @@ footer p {
     position: relative;
   }
   #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .lan {
-    position: absolute;
-    width: 165px;
-    height: 165px;
-    left: 50%;
-    bottom: 0;
-    -webkit-transform: translate(-50%, 0%);
-        -ms-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
-    pointer-events: none;
-  }
-  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .lan a {
-    display: none;
-    position: absolute;
-    right: 0;
-    -webkit-transform: translateX(200%);
-        -ms-transform: translateX(200%);
-            transform: translateX(200%);
-    pointer-events: auto;
-  }
-  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .lan a.fb, #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .lan a.ig, #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .lan a.yt {
-    display: block;
+    margin-top: 2em;
   }
   #fixMenu #fixMenu_main .fixMenu_btn {
     height: 100px;
@@ -4479,83 +4509,7 @@ footer p {
     height: 100%;
   }
   header .container .btns {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 8%;
-    min-width: 48px;
-  }
-  header .container .btns a {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 0;
-    aspect-ratio: 95/300;
-  }
-  header .container .btns a:hover {
-    background-color: transparent;
-  }
-  header .container .btns a span {
-    background: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 1em;
-    line-height: 1em;
-    letter-spacing: 2px;
-    -webkit-writing-mode: vertical-lr;
-        -ms-writing-mode: tb-lr;
-            writing-mode: vertical-lr;
-  }
-  header .container .btns a:before {
     display: none;
-  }
-  header .container .btns a:after {
-    display: none;
-  }
-  header .container .btns a.questions {
-    background: url(../images/fixbtn_bg1.png) no-repeat center center;
-    background-size: contain;
-    padding: 0;
-    margin-right: 0;
-  }
-  header .container .btns a.questions:hover {
-    background-color: transparent;
-  }
-  header .container .btns a.questions span {
-    top: 58%;
-  }
-  header .container .btns a.questions img {
-    margin-left: 0;
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    -webkit-transform: translate(0%, 0%);
-        -ms-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-    width: 1em;
-    height: auto;
-  }
-  header .container .btns a.contact {
-    background: url(../images/fixbtn_bg2.png) no-repeat center center;
-    background-size: contain;
-    -webkit-transform: translateY(-18%);
-        -ms-transform: translateY(-18%);
-            transform: translateY(-18%);
-  }
-  header .container .btns a.order {
-    background: url(../images/fixbtn_bg3.png) no-repeat center center;
-    background-size: contain;
-    -webkit-transform: translateY(-18%);
-        -ms-transform: translateY(-18%);
-            transform: translateY(-18%);
   }
   header .container nav {
     display: none;
@@ -4642,15 +4596,6 @@ footer p {
   }
   #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .order span {
     font-size: 2rem;
-  }
-  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .lan {
-    width: 100%;
-    height: 100%;
-  }
-  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .lan a {
-    -webkit-transform: translateX(180%);
-        -ms-transform: translateX(180%);
-            transform: translateX(180%);
   }
   #kv {
     padding-bottom: 12vw;
