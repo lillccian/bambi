@@ -4026,6 +4026,7 @@ input#menu:checked + #top + #fixMenu #fixMenu_main .fixMenu_btn label img:last-c
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   pointer-events: auto;
+  min-height: 600px;
 }
 #fixMenu #fixMenu_main .fixMenu_nav {
   -webkit-box-flex: 1;
