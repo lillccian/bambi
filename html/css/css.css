@@ -4049,6 +4049,7 @@ input#menu:checked + #top + #fixMenu #fixMenu_main .fixMenu_btn label img:last-c
 }
 #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_left .logo img {
   width: 70%;
+  max-width: 230px;
 }
 #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_left ul {
   margin-top: 3em;
@@ -4329,8 +4330,17 @@ footer p {
   #fixBtns {
     display: none;
   }
+  #fixMenu #fixMenu_main {
+    min-height: 400px;
+  }
   #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_left {
     padding: 4rem 0rem 4rem 6rem;
+  }
+  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_left ul {
+    margin-top: 2em;
+  }
+  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_left ul li {
+    padding: 1rem 0;
   }
   header {
     padding: 2em 0;
