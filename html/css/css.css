@@ -3877,7 +3877,7 @@ header .container .btns a span {
   vertical-align: middle;
   height: 100%;
   width: 100%;
-  background-position: center center;
+  background-position: center 20%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
