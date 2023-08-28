@@ -2551,7 +2551,6 @@ h1 {
 }
 #newsPop .newsPop_content_bg .newsPop_content .newsPop_content_map {
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
   margin: 0 10%;
   height: 120%;
   display: -webkit-box;
@@ -2564,6 +2563,14 @@ h1 {
   width: 80%;
   left: 0;
   top: -10%;
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+#newsPop .newsPop_content_bg .newsPop_content .newsPop_content_map::-webkit-scrollbar {
+  display: none;
 }
 #newsPop .newsPop_content_bg .newsPop_content .newsPop_content_map .contentL {
   -webkit-box-flex: 1;
@@ -4633,4 +4640,14 @@ footer p {
     bottom: 2em;
     font-size: 1rem;
   }
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

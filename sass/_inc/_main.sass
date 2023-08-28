@@ -1393,7 +1393,6 @@
 						line-height: 1.8em
 			.newsPop_content_map
 				overflow: auto
-				-webkit-overflow-scrolling: touch
 				margin:  0 10%
 				height: 120%
 				display: flex
@@ -1402,6 +1401,17 @@
 				width: 80%
 				left: 0
 				top: -10%
+
+				-webkit-overflow-scrolling: touch
+
+				/* Hide scrollbar for IE, Edge and Firefox */
+				-ms-overflow-style: none  /* IE and Edge */
+				scrollbar-width: none  /* Firefox */
+
+				/* Hide scrollbar for Chrome, Safari and Opera */
+				&::-webkit-scrollbar
+					display: none
+
 				.contentL
 					flex: 1
 					ul
