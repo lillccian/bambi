@@ -722,6 +722,10 @@ h1 {
   padding-top: 240px;
   padding-bottom: 150px;
 }
+#news #news-container {
+  margin-top: -100px;
+  padding-top: 100px;
+}
 #news.list {
   background: url(../images/newslist_bg_deco.png) center top repeat-y, url(../images/newslist_bg_top.png) center top no-repeat;
   background-size: 1920px auto, 1920px auto;
@@ -1027,6 +1031,10 @@ h1 {
   position: relative;
   padding-top: 140px;
 }
+#about1 #about1-container {
+  margin-top: -100px;
+  padding-top: 100px;
+}
 
 #about2 {
   background: url(../images/sec_bg3.png) no-repeat center top;
@@ -1034,6 +1042,10 @@ h1 {
   z-index: 1;
   position: relative;
   padding-top: 400px;
+}
+#about2 #about2-container {
+  margin-top: -100px;
+  padding-top: 100px;
 }
 
 #infomation {
@@ -1050,6 +1062,10 @@ h1 {
   height: 100%;
   position: absolute;
   top: -100px;
+}
+#infomation #infomation-container {
+  margin-top: -100px;
+  padding-top: 100px;
 }
 #infomation .container .content {
   padding: 4em 3em;
@@ -1366,6 +1382,10 @@ h1 {
   padding-top: 120px;
   padding-bottom: 100px;
 }
+#animal #animal-container {
+  margin-top: -100px;
+  padding-top: 100px;
+}
 #animal .container #animalBox {
   padding-bottom: 7em;
 }
@@ -1547,9 +1567,13 @@ h1 {
   background-size: 1920px auto;
   z-index: 1;
   position: relative;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 250px;
   overflow: hidden;
+}
+#rules #rules-container {
+  margin-top: -100px;
+  padding-top: 100px;
 }
 #rules .container .content {
   display: -webkit-box;
@@ -1588,6 +1612,10 @@ h1 {
   position: relative;
   padding-top: 140px;
   overflow: hidden;
+}
+#ticket #ticket-container {
+  margin-top: -100px;
+  padding-top: 100px;
 }
 #ticket .container .content {
   padding: 2em 0;
@@ -1671,9 +1699,12 @@ h1 {
   background-size: 1920px auto;
   z-index: 1;
   position: relative;
-  padding-top: 80px;
+  padding-top: 100px;
   overflow: hidden;
-  margin-top: -60px;
+}
+#time #time-container {
+  margin-top: -100px;
+  padding-top: 100px;
 }
 #time .container .content {
   display: -webkit-box;
@@ -1781,6 +1812,10 @@ h1 {
   background-size: 1920px auto;
   z-index: 1;
   position: relative;
+  padding-top: 100px;
+}
+#map #map-container {
+  margin-top: -100px;
   padding-top: 100px;
 }
 #map .container .content .mapBox {
@@ -1931,6 +1966,10 @@ h1 {
 }
 #questions input.checkbox {
   display: none;
+}
+#questions #questions-container {
+  margin-top: -100px;
+  padding-top: 100px;
 }
 #questions .question-session {
   text-align: center;
@@ -4318,7 +4357,7 @@ footer p {
     right: 0;
   }
   #contact .container .content {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
   }
   #contact .container .content .img:last-child {
     margin-right: 3rem;
