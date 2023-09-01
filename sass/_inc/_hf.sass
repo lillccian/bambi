@@ -386,10 +386,6 @@ input#menu
 					transform: translate(-50%,-50%)
 					&:last-child
 						display: none
-			
-
-			
-
 #fixBtns
 	position: fixed
 	z-index: 4
@@ -409,7 +405,6 @@ input#menu
 			display: none
 			&.fb, &.ig, &.yt
 				display: block
-
 #contact
 	background: url(../images/sec_bg9.png) no-repeat center top
 	background-size: 1920px auto
@@ -490,6 +485,9 @@ footer
 		background-size: auto 100%
 		background-position: center bottom
 		margin-top: -20vw
+@media only screen and (max-width: 1440px)
+	#contact
+		background-size: 100% auto
 @media only screen and (max-width: 1280px)
 	#fixBtns
 		display: none
@@ -521,7 +519,6 @@ footer
 			+ #fixMenu
 				+ #fixBtns
 					.order
-						display: none
 				&:before
 					opacity: 0
 				#fixMenu_main
@@ -567,8 +564,10 @@ footer
 					padding-right: 0
 					position: relative
 					&.order-style
+						.order
+							display: none
 						.lan
-							margin-top: 2em
+							margin-top: 0
 			.fixMenu_btn
 				height: 100px
 				a
@@ -579,7 +578,7 @@ footer
 					width: 80px
 					height: 80px
 					position: absolute
-					right: 0
+					right: 30px
 					top: 10px
 					pointer-events: auto
 
@@ -591,12 +590,8 @@ footer
 		height: 100px
 		padding: 0
 		pointer-events: none
-		&.on
-			.order
-				opacity: 0
-				pointer-events: none
 		.order
-			width: 6rem
+			width: 4.5rem
 			position: absolute
 			left: 50%
 			top: 50%
@@ -604,7 +599,7 @@ footer
 			pointer-events: auto
 			transition: all 0.3s ease
 			span
-				font-size: 1.3rem
+				font-size: 14px
 		.lan
 			position: absolute
 			right: 80px
@@ -642,6 +637,7 @@ footer
 			nav
 				display: none
 	#contact
+		margin-top: -120px
 		.container
 			.content
 				padding-bottom: 3rem
@@ -672,6 +668,8 @@ footer
 			p
 				font-size: 2.4rem
 	header
+		display: flex
+		item-align: center
 		height: 100px
 		.container
 			a
@@ -683,13 +681,15 @@ footer
 					height: 37.8vw
 	#fixBtns
 		.order
-			width: 18vw
+			width: 70px
 	#fixMenu
 		#fixMenu_main
 			.fixMenu_btn
 				label
-					width: 80px
-					height: 80px
+					top: 20px
+					right: 2rem
+					width: 60px
+					height: 60px
 					img
 						height: 6vw
 			.fixMenu_nav
@@ -704,13 +704,7 @@ footer
 								font-size: 1.4rem
 				.fixMenu_nav_right.order-style
 					margin-top: 2em
-					.order
-						width: 32vw
-						display: block
-						span
-							font-size: 2rem
 	#kv
-		padding-bottom: 12vw
 		.container
 			.kvSlide
 				&:before
@@ -722,6 +716,7 @@ footer
 					width: 5vw
 					margin: 1em
 	#contact
+		margin-top: -80px
 		.container
 			.content
 				.text

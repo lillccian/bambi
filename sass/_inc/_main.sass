@@ -6,9 +6,6 @@
 	position: relative
 	padding-top: 240px
 	padding-bottom: 150px
-	#news-container
-		margin-top: -100px
-		padding-top: 100px
 	&.list
 		background: url(../images/newslist_bg_deco.png) center top repeat-y, url(../images/newslist_bg_top.png) center top no-repeat
 		background-size: 1920px auto,1920px auto
@@ -237,18 +234,12 @@
 	z-index: 1
 	position: relative
 	padding-top: 140px
-	#about1-container
-		margin-top: -100px
-		padding-top: 100px
 #about2
 	background: url(../images/sec_bg3.png) no-repeat center top
 	background-size: 1920px auto
 	z-index: 1
 	position: relative
 	padding-top: 400px
-	#about2-container
-		margin-top: -100px
-		padding-top: 100px
 #infomation
 	z-index: 1
 	position: relative
@@ -262,9 +253,7 @@
 		height: 100%
 		position: absolute
 		top: -100px
-	#infomation-container
-		margin-top: -100px
-		padding-top: 100px
+		z-index: -1
 	.container
 		.content
 			padding: 4em 3em
@@ -506,9 +495,6 @@
 	position: relative
 	padding-top: 120px
 	padding-bottom: 100px
-	#animal-container
-		margin-top: -100px
-		padding-top: 100px
 	.container
 		#animalBox
 			padding-bottom: 7em
@@ -648,9 +634,6 @@
 	padding-top: 100px
 	padding-bottom: 250px
 	overflow: hidden
-	#rules-container
-		margin-top: -100px
-		padding-top: 100px
 	.container
 		.content
 			display: flex
@@ -677,9 +660,6 @@
 	position: relative
 	padding-top: 140px
 	overflow: hidden
-	#ticket-container
-		margin-top: -100px
-		padding-top: 100px
 	.container
 		.content
 			padding: 2em 0
@@ -748,9 +728,6 @@
 	position: relative
 	padding-top: 100px
 	overflow: hidden
-	#time-container
-		margin-top: -100px
-		padding-top: 100px
 	.container
 		.content
 			display: flex
@@ -837,9 +814,6 @@
 	z-index: 1
 	position: relative
 	padding-top: 100px
-	#map-container
-		margin-top: -100px
-		padding-top: 100px
 	.container
 		.content
 			.mapBox
@@ -960,9 +934,6 @@
 		z-index: 1
 	input.checkbox
 		display: none
-	#questions-container
-		margin-top: -100px
-		padding-top: 100px
 	.question-session
 		text-align: center
 		> label
@@ -1594,8 +1565,9 @@
 					background: url(../images/kv_border_mid.png) repeat-y center center
 					background-size: 100% auto
 					pointer-events: none
-@media only screen and (max-width: 1280px)
 	#news
+		.scrollDown
+			left: calc(50% + 60px)
 		.container
 			> a
 				right: 2.25rem
@@ -1625,9 +1597,78 @@
 							.info
 								width: 60%
 								left: 100%
+#news-container,
+#about1-container,
+#about2-container,
+#infomation-container,
+#animal-container,
+#rules-container,
+#ticket-container,
+#time-container,
+#map-container,
+#questions-container
+	margin-top: -75px
+	padding-top: 75px
+@media only screen and (max-width: 1440px)
+	#news,
+	#ticket
+		background-size: cover
+	#about1,
+	#about2,
+	#animal,
+	#rules,
+	#time,
+	#map,
+	#shop
+		background-size: 100% auto
+@media only screen and (max-width: 1280px)
+	#news
+		.scrollDown
+			left: calc(50% + 60px)
+		.container
+			> a
+				right: 2.25rem
+	#rules
+		.container
+			.content
+				align-items: center
+				ul
+					padding-bottom: 4vw
+				.img
+					width: 40%
+	#animal
+		.container
+			#animalBox
+				.animalSlide
+					&:after
+						width: 36%
+					.animalSlide_content
+						&.a3
+							a
+								.name
+									margin-left: -60%
+						a
+							padding-bottom: 3rem
+							.name
+								margin-left: -60%
+							.info
+								width: 60%
+								left: 100%
+	#news-container,
+	#about1-container,
+	#about2-container,
+	#infomation-container,
+	#animal-container,
+	#rules-container,
+	#ticket-container,
+	#time-container,
+	#map-container,
+	#questions-container
+		padding-top: 50px
 @media only screen and (max-width: 1023px)
 	#news
-		background-size: 130% auto
+		.scrollDown
+			left: 50%
 		&.list
 			background-size: 200% auto, 200% auto
 			.container
@@ -1779,14 +1820,22 @@
 				flex-direction: column
 				.text
 					text-align: center
-	#about2
+	#about1
+		background-size: 100% auto
 		.container
+			margin-top: -150px
+	#about2
+		background-size: 100% auto
+		padding-top: 230px
+		.container
+			padding-top: 0px
 			.content
 				flex-direction: column-reverse
 	#animal
-		padding-top: 15vw
+		padding-top: 0
+		margin-top: -50px
 		.container
-			padding: 0
+			margin-top: 0
 			#animalBox
 				.animalSlide
 					.slick-arrow
@@ -1817,9 +1866,12 @@
 				flex-direction: column
 				.img
 					width: 50%
+	#infomation
+		margin-top: -350px
 	#ticket
+		background-position: 80% top
 		.container
-			padding: 0
+			margin-top: -100px
 			.content
 				.ticket
 					padding-left: 10%
@@ -1863,7 +1915,10 @@
 					span
 						padding: 1.2em 0
 	#time
+		padding-top: 0
+		margin-top: -50px
 		.container
+			margin-top: 0
 			.content
 				flex-direction: column
 				padding: 2em 10% 0 10%
@@ -1901,6 +1956,9 @@
 								left: 50%
 								transform: translateX(-50%)
 								top: 10%
+			.msg
+				p
+					margin-top: 2rem
 	#map
 		.container
 			.content
@@ -1932,6 +1990,7 @@
 	#questions
 		&:before
 			top: -10vw
+			height: 20vw
 		.question-content
 			label
 				border-radius: 40px
@@ -1986,6 +2045,17 @@
 					a
 						display: inline-block
 						padding: 1.5em 2.5em
+	#news-container,
+	#about1-container,
+	#about2-container,
+	#infomation-container,
+	#animal-container,
+	#rules-container,
+	#ticket-container,
+	#time-container,
+	#map-container,
+	#questions-container
+		padding-top: 150px
 @media only screen and (max-width: 767px)
 	#news
 		background-size: 160% auto
@@ -2001,13 +2071,14 @@
 						width: 100%
 		.scrollDown
 			font-size: 1.4rem
-			top: 24vw
+			top: 15vw
+		.container
+			margin-top: -150px
 		.news-style
 			.newsSlide_content
 				width: calc(100vw - 2rem - 13vw)
 	#about1
 		background-size: 200% auto
-		margin-top: -40vw
 	#about2
 		background-position: center top
 		background-size: 250% auto
@@ -2025,9 +2096,6 @@
 					h6
 						font-size: 1.6rem
 	#infomation
-		background-size: 200% auto
-		background-position: right top
-		padding-top: 40vw
 		.container
 			.content
 				>a
@@ -2061,7 +2129,8 @@
 						p
 							font-size: 5rem
 	#animal
-		padding-top: 10vw
+		margin-top: -30px
+		padding-bottom: 80px
 		.container
 			#animalBox
 				.animalSlide
@@ -2133,6 +2202,8 @@
 					padding-right: 0
 	#ticket
 		.container
+			margin-top: -150px
+			padding-top: 135px
 			.content
 				.ticket
 					width: 130%
@@ -2173,6 +2244,7 @@
 				a
 					margin: 1em 0 0
 	#time
+		margin-top: -30px
 		.container
 			.content
 				.info
@@ -2268,6 +2340,9 @@
 			aspect-ratio: 367 / 483
 			overflow: hidden
 	#questions
+		padding-top: 10px
+		&:before
+			top: -17vw
 		.question-content
 			> label
 				> span::after
@@ -2286,3 +2361,14 @@
 						height: 25px
 						padding: 5px
 						line-height: 20px
+	#news-container,
+	#about1-container,
+	#about2-container,
+	#infomation-container,
+	#animal-container,
+	#rules-container,
+	#ticket-container,
+	#time-container,
+	#map-container,
+	#questions-container
+		padding-top: 125px

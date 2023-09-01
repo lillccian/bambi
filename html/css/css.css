@@ -722,10 +722,6 @@ h1 {
   padding-top: 240px;
   padding-bottom: 150px;
 }
-#news #news-container {
-  margin-top: -100px;
-  padding-top: 100px;
-}
 #news.list {
   background: url(../images/newslist_bg_deco.png) center top repeat-y, url(../images/newslist_bg_top.png) center top no-repeat;
   background-size: 1920px auto, 1920px auto;
@@ -1031,10 +1027,6 @@ h1 {
   position: relative;
   padding-top: 140px;
 }
-#about1 #about1-container {
-  margin-top: -100px;
-  padding-top: 100px;
-}
 
 #about2 {
   background: url(../images/sec_bg3.png) no-repeat center top;
@@ -1042,10 +1034,6 @@ h1 {
   z-index: 1;
   position: relative;
   padding-top: 400px;
-}
-#about2 #about2-container {
-  margin-top: -100px;
-  padding-top: 100px;
 }
 
 #infomation {
@@ -1062,10 +1050,7 @@ h1 {
   height: 100%;
   position: absolute;
   top: -100px;
-}
-#infomation #infomation-container {
-  margin-top: -100px;
-  padding-top: 100px;
+  z-index: -1;
 }
 #infomation .container .content {
   padding: 4em 3em;
@@ -1382,10 +1367,6 @@ h1 {
   padding-top: 120px;
   padding-bottom: 100px;
 }
-#animal #animal-container {
-  margin-top: -100px;
-  padding-top: 100px;
-}
 #animal .container #animalBox {
   padding-bottom: 7em;
 }
@@ -1571,10 +1552,6 @@ h1 {
   padding-bottom: 250px;
   overflow: hidden;
 }
-#rules #rules-container {
-  margin-top: -100px;
-  padding-top: 100px;
-}
 #rules .container .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1612,10 +1589,6 @@ h1 {
   position: relative;
   padding-top: 140px;
   overflow: hidden;
-}
-#ticket #ticket-container {
-  margin-top: -100px;
-  padding-top: 100px;
 }
 #ticket .container .content {
   padding: 2em 0;
@@ -1701,10 +1674,6 @@ h1 {
   position: relative;
   padding-top: 100px;
   overflow: hidden;
-}
-#time #time-container {
-  margin-top: -100px;
-  padding-top: 100px;
 }
 #time .container .content {
   display: -webkit-box;
@@ -1812,10 +1781,6 @@ h1 {
   background-size: 1920px auto;
   z-index: 1;
   position: relative;
-  padding-top: 100px;
-}
-#map #map-container {
-  margin-top: -100px;
   padding-top: 100px;
 }
 #map .container .content .mapBox {
@@ -1966,10 +1931,6 @@ h1 {
 }
 #questions input.checkbox {
   display: none;
-}
-#questions #questions-container {
-  margin-top: -100px;
-  padding-top: 100px;
 }
 #questions .question-session {
   text-align: center;
@@ -2793,8 +2754,73 @@ h1 {
   background-size: 100% auto;
   pointer-events: none;
 }
+#newKv #news .scrollDown {
+  left: calc(50% + 60px);
+}
+#newKv #news .container > a {
+  right: 2.25rem;
+}
+#newKv #rules .container .content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#newKv #rules .container .content ul {
+  padding-bottom: 4vw;
+}
+#newKv #rules .container .content .img {
+  width: 40%;
+}
+#newKv #animal .container #animalBox .animalSlide:after {
+  width: 36%;
+}
+#newKv #animal .container #animalBox .animalSlide .animalSlide_content.a3 a .name {
+  margin-left: -60%;
+}
+#newKv #animal .container #animalBox .animalSlide .animalSlide_content a {
+  padding-bottom: 3rem;
+}
+#newKv #animal .container #animalBox .animalSlide .animalSlide_content a .name {
+  margin-left: -60%;
+}
+#newKv #animal .container #animalBox .animalSlide .animalSlide_content a .info {
+  width: 60%;
+  left: 100%;
+}
 
+#news-container,
+#about1-container,
+#about2-container,
+#infomation-container,
+#animal-container,
+#rules-container,
+#ticket-container,
+#time-container,
+#map-container,
+#questions-container {
+  margin-top: -75px;
+  padding-top: 75px;
+}
+
+@media only screen and (max-width: 1440px) {
+  #news,
+  #ticket {
+    background-size: cover;
+  }
+  #about1,
+  #about2,
+  #animal,
+  #rules,
+  #time,
+  #map,
+  #shop {
+    background-size: 100% auto;
+  }
+}
 @media only screen and (max-width: 1280px) {
+  #news .scrollDown {
+    left: calc(50% + 60px);
+  }
   #news .container > a {
     right: 2.25rem;
   }
@@ -2825,10 +2851,22 @@ h1 {
     width: 60%;
     left: 100%;
   }
+  #news-container,
+  #about1-container,
+  #about2-container,
+  #infomation-container,
+  #animal-container,
+  #rules-container,
+  #ticket-container,
+  #time-container,
+  #map-container,
+  #questions-container {
+    padding-top: 50px;
+  }
 }
 @media only screen and (max-width: 1023px) {
-  #news {
-    background-size: 130% auto;
+  #news .scrollDown {
+    left: 50%;
   }
   #news.list {
     background-size: 200% auto, 200% auto;
@@ -3039,6 +3077,19 @@ h1 {
   .about .container .content .text {
     text-align: center;
   }
+  #about1 {
+    background-size: 100% auto;
+  }
+  #about1 .container {
+    margin-top: -150px;
+  }
+  #about2 {
+    background-size: 100% auto;
+    padding-top: 230px;
+  }
+  #about2 .container {
+    padding-top: 0px;
+  }
   #about2 .container .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -3046,10 +3097,11 @@ h1 {
             flex-direction: column-reverse;
   }
   #animal {
-    padding-top: 15vw;
+    padding-top: 0;
+    margin-top: -50px;
   }
   #animal .container {
-    padding: 0;
+    margin-top: 0;
   }
   #animal .container #animalBox .animalSlide .slick-arrow {
     width: 3rem;
@@ -3086,8 +3138,14 @@ h1 {
   #rules .container .content .img {
     width: 50%;
   }
+  #infomation {
+    margin-top: -350px;
+  }
+  #ticket {
+    background-position: 80% top;
+  }
   #ticket .container {
-    padding: 0;
+    margin-top: -100px;
   }
   #ticket .container .content .ticket {
     padding-left: 10%;
@@ -3144,6 +3202,13 @@ h1 {
   }
   #ticket .container .btns a span {
     padding: 1.2em 0;
+  }
+  #time {
+    padding-top: 0;
+    margin-top: -50px;
+  }
+  #time .container {
+    margin-top: 0;
   }
   #time .container .content {
     -webkit-box-orient: vertical;
@@ -3204,6 +3269,9 @@ h1 {
             transform: translateX(-50%);
     top: 10%;
   }
+  #time .container .msg p {
+    margin-top: 2rem;
+  }
   #map .container .content .mapBox {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3242,6 +3310,7 @@ h1 {
   }
   #questions:before {
     top: -10vw;
+    height: 20vw;
   }
   #questions .question-content label {
     border-radius: 40px;
@@ -3308,6 +3377,18 @@ h1 {
     display: inline-block;
     padding: 1.5em 2.5em;
   }
+  #news-container,
+  #about1-container,
+  #about2-container,
+  #infomation-container,
+  #animal-container,
+  #rules-container,
+  #ticket-container,
+  #time-container,
+  #map-container,
+  #questions-container {
+    padding-top: 150px;
+  }
 }
 @media only screen and (max-width: 767px) {
   #news {
@@ -3328,14 +3409,16 @@ h1 {
   }
   #news .scrollDown {
     font-size: 1.4rem;
-    top: 24vw;
+    top: 15vw;
+  }
+  #news .container {
+    margin-top: -150px;
   }
   #news .news-style .newsSlide_content {
     width: calc(100vw - 2rem - 13vw);
   }
   #about1 {
     background-size: 200% auto;
-    margin-top: -40vw;
   }
   #about2 {
     background-position: center top;
@@ -3354,11 +3437,6 @@ h1 {
   }
   .about .container .content .text h6 {
     font-size: 1.6rem;
-  }
-  #infomation {
-    background-size: 200% auto;
-    background-position: right top;
-    padding-top: 40vw;
   }
   #infomation .container .content > a {
     margin-top: 0;
@@ -3402,7 +3480,8 @@ h1 {
     font-size: 5rem;
   }
   #animal {
-    padding-top: 10vw;
+    margin-top: -30px;
+    padding-bottom: 80px;
   }
   #animal .container #animalBox .animalSlide {
     background-size: 70% auto;
@@ -3495,6 +3574,10 @@ h1 {
   #rules .container .content ul {
     padding-right: 0;
   }
+  #ticket .container {
+    margin-top: -150px;
+    padding-top: 135px;
+  }
   #ticket .container .content .ticket {
     width: 130%;
     padding: 0.5em 0 0.5em 29%;
@@ -3546,6 +3629,9 @@ h1 {
   }
   #ticket .container .btns a {
     margin: 1em 0 0;
+  }
+  #time {
+    margin-top: -30px;
   }
   #time .container .content .info p {
     font-size: 1.2rem;
@@ -3658,6 +3744,12 @@ h1 {
     aspect-ratio: 367/483;
     overflow: hidden;
   }
+  #questions {
+    padding-top: 10px;
+  }
+  #questions:before {
+    top: -17vw;
+  }
   #questions .question-content > label > span::after {
     width: 12px;
     height: 12px;
@@ -3676,6 +3768,18 @@ h1 {
     height: 25px;
     padding: 5px;
     line-height: 20px;
+  }
+  #news-container,
+  #about1-container,
+  #about2-container,
+  #infomation-container,
+  #animal-container,
+  #rules-container,
+  #ticket-container,
+  #time-container,
+  #map-container,
+  #questions-container {
+    padding-top: 125px;
   }
 }
 #loading {
@@ -4375,6 +4479,11 @@ footer p {
     margin-top: -20vw;
   }
 }
+@media only screen and (max-width: 1440px) {
+  #contact {
+    background-size: 100% auto;
+  }
+}
 @media only screen and (max-width: 1280px) {
   #fixBtns {
     display: none;
@@ -4407,9 +4516,6 @@ footer p {
   }
   input#menu:checked + #top header {
     background: #fff;
-  }
-  input#menu:checked + #top + #fixMenu + #fixBtns .order {
-    display: none;
   }
   input#menu:checked + #top + #fixMenu:before {
     opacity: 0;
@@ -4480,8 +4586,11 @@ footer p {
     padding-right: 0;
     position: relative;
   }
+  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .order {
+    display: none;
+  }
   #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .lan {
-    margin-top: 2em;
+    margin-top: 0;
   }
   #fixMenu #fixMenu_main .fixMenu_btn {
     height: 100px;
@@ -4495,7 +4604,7 @@ footer p {
     width: 80px;
     height: 80px;
     position: absolute;
-    right: 0;
+    right: 30px;
     top: 10px;
     pointer-events: auto;
   }
@@ -4508,12 +4617,8 @@ footer p {
     padding: 0;
     pointer-events: none;
   }
-  #fixBtns.on .order {
-    opacity: 0;
-    pointer-events: none;
-  }
   #fixBtns .order {
-    width: 6rem;
+    width: 4.5rem;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -4525,7 +4630,7 @@ footer p {
     transition: all 0.3s ease;
   }
   #fixBtns .order span {
-    font-size: 1.3rem;
+    font-size: 14px;
   }
   #fixBtns .lan {
     position: absolute;
@@ -4571,6 +4676,9 @@ footer p {
   header .container nav {
     display: none;
   }
+  #contact {
+    margin-top: -120px;
+  }
   #contact .container .content {
     padding-bottom: 3rem;
     padding-top: 10rem;
@@ -4611,6 +4719,10 @@ footer p {
     font-size: 2.4rem;
   }
   header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    item-align: center;
     height: 100px;
   }
   header .container a {
@@ -4624,11 +4736,13 @@ footer p {
     height: 37.8vw;
   }
   #fixBtns .order {
-    width: 18vw;
+    width: 70px;
   }
   #fixMenu #fixMenu_main .fixMenu_btn label {
-    width: 80px;
-    height: 80px;
+    top: 20px;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
   }
   #fixMenu #fixMenu_main .fixMenu_btn label img {
     height: 6vw;
@@ -4647,16 +4761,6 @@ footer p {
   #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style {
     margin-top: 2em;
   }
-  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .order {
-    width: 32vw;
-    display: block;
-  }
-  #fixMenu #fixMenu_main .fixMenu_nav .fixMenu_nav_right.order-style .order span {
-    font-size: 2rem;
-  }
-  #kv {
-    padding-bottom: 12vw;
-  }
   #kv .container .kvSlide:before {
     background: url(../images/kv_border_top_m.png) no-repeat center top;
     background-size: 100% auto;
@@ -4669,6 +4773,9 @@ footer p {
   #kv .container .slick-dots li {
     width: 5vw;
     margin: 1em;
+  }
+  #contact {
+    margin-top: -80px;
   }
   #contact .container .content .text {
     font-size: 1.4rem;
