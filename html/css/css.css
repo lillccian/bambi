@@ -1450,14 +1450,14 @@ h1 {
 #animal .container #animalBox .animalSlide .animalSlide_content.slick-current a .name, #animal .container #animalBox .animalSlide .animalSlide_content.slick-current a .info {
   opacity: 1;
 }
-#animal .container #animalBox .animalSlide .animalSlide_content.a3 a {
+#animal .container #animalBox .animalSlide .animalSlide_content.a3 a, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a {
   padding-top: 60px;
   padding-bottom: 50px;
 }
-#animal .container #animalBox .animalSlide .animalSlide_content.a3 a img {
-  height: 330px;
+#animal .container #animalBox .animalSlide .animalSlide_content.a3 a img, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a img {
+  height: 300px;
 }
-#animal .container #animalBox .animalSlide .animalSlide_content.a3 a .name {
+#animal .container #animalBox .animalSlide .animalSlide_content.a3 a .name, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a .name {
   margin-left: -54%;
 }
 #animal .container #animalBox .animalSlide .animalSlide_content a {
@@ -1478,7 +1478,7 @@ h1 {
   position: absolute;
   left: 50%;
   margin-left: -44%;
-  top: 30%;
+  top: 20%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
