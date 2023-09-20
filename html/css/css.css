@@ -1450,14 +1450,14 @@ h1 {
 #animal .container #animalBox .animalSlide .animalSlide_content.slick-current a .name, #animal .container #animalBox .animalSlide .animalSlide_content.slick-current a .info {
   opacity: 1;
 }
-#animal .container #animalBox .animalSlide .animalSlide_content.a3 a, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a {
+#animal .container #animalBox .animalSlide .animalSlide_content.a3 a, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a, #animal .container #animalBox .animalSlide .animalSlide_content.a5 a {
   padding-top: 60px;
   padding-bottom: 50px;
 }
-#animal .container #animalBox .animalSlide .animalSlide_content.a3 a img, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a img {
-  height: 300px;
+#animal .container #animalBox .animalSlide .animalSlide_content.a3 a img, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a img, #animal .container #animalBox .animalSlide .animalSlide_content.a5 a img {
+  height: 310px;
 }
-#animal .container #animalBox .animalSlide .animalSlide_content.a3 a .name, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a .name {
+#animal .container #animalBox .animalSlide .animalSlide_content.a3 a .name, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a .name, #animal .container #animalBox .animalSlide .animalSlide_content.a5 a .name {
   margin-left: -54%;
 }
 #animal .container #animalBox .animalSlide .animalSlide_content a {
@@ -1502,7 +1502,7 @@ h1 {
   right: 0;
   top: 2%;
   width: 60%;
-  left: 89%;
+  left: 100%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -2585,7 +2585,7 @@ h1 {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url(../images/kv_border_mid.png) repeat-y center;
+  background: url(../images/kv_border_mid_w.png) repeat-y center;
   background-size: 100% auto;
   z-index: 2;
 }
@@ -2595,7 +2595,7 @@ h1 {
   width: 100%;
   padding-top: 12%;
   top: -1px;
-  background: url(../images/kv_border_top.png) no-repeat center top;
+  background: url(../images/kv_border_top_w.png) no-repeat center top;
   background-size: 100% auto;
   pointer-events: none;
   z-index: 1;
@@ -2606,7 +2606,7 @@ h1 {
   width: 100%;
   padding-top: 12%;
   bottom: -1px;
-  background: url(../images/kv_border_btm.png) no-repeat center bottom;
+  background: url(../images/kv_border_btm_w.png) no-repeat center bottom;
   background-size: 100% auto;
   pointer-events: none;
   left: 0;
@@ -2849,7 +2849,7 @@ h1 {
   }
   #animal .container #animalBox .animalSlide .animalSlide_content a .info {
     width: 60%;
-    left: 100%;
+    left: 110%;
   }
   #news-container,
   #about1-container,
@@ -3115,7 +3115,8 @@ h1 {
     font-size: 5rem;
   }
   #animal .container #animalBox .animalSlide .animalSlide_content a .info {
-    left: 120%;
+    top: 15%;
+    left: 115%;
   }
   #animal .container #animalBox .animalSlide .animalSlide_content a .info .detail {
     width: 50%;
@@ -3422,7 +3423,7 @@ h1 {
   }
   #about2 {
     background-position: center top;
-    background-size: 250% auto;
+    background-size: 265% auto;
     padding-top: 60vw;
     padding-bottom: 10vw;
   }
@@ -3507,30 +3508,23 @@ h1 {
             transform: scale(0.4);
     margin: 0 5vw;
   }
-  #animal .container #animalBox .animalSlide .animalSlide_content.a3 a {
+  #animal .container #animalBox .animalSlide .animalSlide_content.a3 a, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a, #animal .container #animalBox .animalSlide .animalSlide_content.a5 a {
     padding-top: 8rem;
     padding-bottom: 10rem;
   }
-  #animal .container #animalBox .animalSlide .animalSlide_content.a3 a .name {
+  #animal .container #animalBox .animalSlide .animalSlide_content.a3 a .name, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a .name, #animal .container #animalBox .animalSlide .animalSlide_content.a5 a .name {
     margin-left: 0;
     top: 0;
     -webkit-transform: translate(-50%, 0%);
         -ms-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
   }
-  #animal .container #animalBox .animalSlide .animalSlide_content.a3 a img {
+  #animal .container #animalBox .animalSlide .animalSlide_content.a3 a img, #animal .container #animalBox .animalSlide .animalSlide_content.a4 a img, #animal .container #animalBox .animalSlide .animalSlide_content.a5 a img {
     height: 60vw;
     margin-top: 20vw;
     -webkit-transform: translateX(-10%);
         -ms-transform: translateX(-10%);
             transform: translateX(-10%);
-  }
-  #animal .container #animalBox .animalSlide .animalSlide_content.a4 a img {
-    -webkit-transform: translateX(-10%);
-        -ms-transform: translateX(-10%);
-            transform: translateX(-10%);
-    height: 60vw;
-    margin-top: 20vw;
   }
   #animal .container #animalBox .animalSlide .animalSlide_content a {
     padding-top: 8rem;
