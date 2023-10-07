@@ -168,7 +168,7 @@ function loadbar() {
       $(".kv_logo").addClass("on");
       $("#loading").fadeOut();
       $("body").addClass("init");
-    },1500);
+    },500);
   }
 
   for (var i = 0; i < tot; i++) {
