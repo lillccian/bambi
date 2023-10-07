@@ -148,9 +148,10 @@ let map_points = {
 const apiURL = 'https://www.bambiland.com.tw/api/';
 
 function loadbar() {
-  var img = document.images,
+  var img = Array.from(document.images).slice(0,50),
     c = 0,
     tot = img.length;
+
   if (tot == 0) return doneLoading();
 
   function imgLoaded() {
@@ -159,6 +160,7 @@ function loadbar() {
     $(".percent").text(perc);
     if (c === tot) return doneLoading();
   }
+
   function doneLoading() {
     setTimeout(function() {
       AOS.init();
@@ -166,16 +168,20 @@ function loadbar() {
       $(".kv_logo").addClass("on");
       $("#loading").fadeOut();
       $("body").addClass("init");
-    },2000);
+    },1500);
   }
+
   for (var i = 0; i < tot; i++) {
     var tImg = new Image();
+
     tImg.onload = imgLoaded;
     tImg.onerror = imgLoaded;
     tImg.src = img[i].src;
   }
 }
+
 document.addEventListener('DOMContentLoaded', loadbar, false);
+
 $('.kvSlide').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
