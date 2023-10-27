@@ -178,9 +178,26 @@ function loadbar() {
     tImg.onerror = imgLoaded;
     tImg.src = img[i].src;
   }
+
+  asyncImage()
+}
+
+function asyncImage(){
+  var img = document.querySelectorAll('img[loading]'),
+      tot = img.length;
+
+  for (var i = 0; i < tot; i++) {
+    var tImg = new Image();
+
+    tImg.onload
+    tImg.onerror
+    tImg.src = img[i].src;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', loadbar, false);
+
+asyncImage()
 
 $('.kvSlide').slick({
   slidesToShow: 1,
