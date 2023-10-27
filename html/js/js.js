@@ -148,7 +148,7 @@ let map_points = {
 const apiURL = 'https://www.bambiland.com.tw/api/';
 
 function loadbar() {
-  var img = Array.from(document.images).slice(0,50),
+  var img = document.querySelectorAll('img:not([loading])'),
     c = 0,
     tot = img.length;
 
