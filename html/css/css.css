@@ -270,29 +270,29 @@
 }
 @font-face {
   font-family: "GenJyuuGothic";
-  src: url("https://googlefonts.github.io/chinese/fonts/genjyuugothic/GenJyuuGothic-Light.woff2") format("woff2");
+  src: url("../fonts/GenJyuuGothic-Light.woff2") format("woff2");
   font-weight: 100;
 }
 @font-face {
   font-family: "GenJyuuGothic";
-  src: url("https://googlefonts.github.io/chinese/fonts/genjyuugothic/GenJyuuGothic-Regular.woff2") format("woff2");
+  src: url("../fonts/GenJyuuGothic-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "GenJyuuGothic";
-  src: url("https://googlefonts.github.io/chinese/fonts/genjyuugothic/GenJyuuGothic-Medium.woff2") format("woff2");
+  src: url("../fonts/GenJyuuGothic-Medium.woff2") format("woff2");
   font-weight: 300;
 }
 @font-face {
   font-family: "GenJyuuGothic";
-  src: url("https://googlefonts.github.io/chinese/fonts/genjyuugothic/GenJyuuGothic-Bold.woff2") format("woff2");
+  src: url("../fonts/GenJyuuGothic-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: bold;
 }
 @font-face {
   font-family: "GenJyuuGothic";
-  src: url("https://googlefonts.github.io/chinese/fonts/genjyuugothic/GenJyuuGothic-Heavy.woff2") format("woff2");
+  src: url("../fonts/GenJyuuGothic-Heavy.woff2") format("woff2");
   font-weight: 900;
 }
 * {
